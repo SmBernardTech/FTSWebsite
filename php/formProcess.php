@@ -1,13 +1,15 @@
 <?php
+
 if(!isset($_POST['Name'])) {
+    echo "Exiting...";
     exit(0);
 }
 
-define('CONFIGFILE', 'formConfiguration.php');
-define('VALIDATEFILE', 'formValidator.php');
-define('PHPMAILER', 'class.phpmailer.php');
-define('PHPMAILERSMTP', 'class.smtp.php');
-define('EMAILTEMPLATEFILE', 'emailTemplate.html');
+define('CONFIGFILE', dirname(__FILE__).'/formConfiguration.php');
+define('VALIDATEFILE', dirname(__FILE__).'/formValidator.php');
+define('PHPMAILER', dirname(__FILE__).'/class.phpmailer.php');
+define('PHPMAILERSMTP', dirname(__FILE__).'/class.smtp.php');
+define('EMAILTEMPLATEFILE', dirname(__FILE__).'/emailTemplate.html');
 
 // check all fields have been supplied by the form
 $form_fields = array(
@@ -28,8 +30,10 @@ sendEmail();
 
 
 function checkConfigurationExists() {
-    if (!file_exists( dirname(__FILE__).'/'.CONFIGFILE) ) {
-        echo "Form configuration does not exist. If you're the webmaster - please see installation instructions";
+    if (!file_exists(CONFIGFILE) ) {
+        echo "Form configuration does not exist. If you're the webmaster - please see installation instructions<br>\n";
+        echo CONFIGFILE;
+        echo "<br>\nPath = " . dirname(__FILE__) . "<br>\n";
         exit(1);
     }
 }
@@ -69,7 +73,6 @@ function checkRecaptcha() {
 
 function validateFields($form_fields) {
     require_once VALIDATEFILE;
-
     $validate = new FormValidate;
     
     foreach($form_fields as $field => $type) {
@@ -86,7 +89,6 @@ function validateFields($form_fields) {
 }
 
 function sendEmail() {
-    
     require CONFIGFILE;
     require_once PHPMAILER;
     require_once PHPMAILERSMTP;
@@ -114,7 +116,7 @@ function sendEmail() {
         $mail->Username = $smtp_username;            
         $mail->Password = $smtp_password;                         
     }
-    
+
     $mail->From = $_POST['Email']; 
     $mail->FromName = $_POST['Name']; 
     $mail->addAddress($email_to, $email_to);   
@@ -138,6 +140,7 @@ function sendEmail() {
         echo 'Thank you for contacting us. We will be in touch as soon as possible.';
     }
     exit(0);
+}
 
 function getEmailType($email_type) {
     $isHTML = false;
@@ -173,7 +176,7 @@ function getIsSmtp($use_smtp) {
 
 function getHtmlBody($isHTML, $showIP) {
     if($isHTML) {
-        $html_template = file_get_contents('./'.EMAILTEMPLATEFILE);
+        $html_template = file_get_contents(EMAILTEMPLATEFILE);
         $html = "";
         foreach($_POST as $field => $value) {
             if($field == "Challenge") { continue; }
@@ -203,4 +206,3 @@ function getPlainBody($showIP) {
     }
     return $plain;
 }
-?>

@@ -2,7 +2,7 @@
 
 // enter the email address of where
 // you want to receive the form submissions
-$email_to = "susanmbernard@gmail.com";
+$email_to = "mfine@fineonline.com";
 
 // enter the email subject line
 $email_subject = "Message from FTS Contact Form";
@@ -25,9 +25,9 @@ $smtp_port = "465";
 // Use ReCAPTCHA V2
 // Generate your keys at: https://www.google.com/recaptcha/intro/index.html
 // set value to "yes" or "no"
-$use_recaptcha = "no";
-$sitekey = "";
-$privatekey = "";
+$use_recaptcha = "yes";
+$sitekey = "6LeEkxwTAAAAABnTl_ntVp9Sy6LbcllbFDgLHysA";
+$privatekey = "6LeEkxwTAAAAAH-EMmZz5VjYNqlg2Ack7XsbhBuN";
 
 // If you have problems getting SMTP to work
 // switch on debugging output
