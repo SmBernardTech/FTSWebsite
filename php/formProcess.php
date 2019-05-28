@@ -136,10 +136,8 @@ function sendEmail() {
         echo 'Mailer Error: ' . $mail->ErrorInfo;
     } else {
         echo 'Thank you for contacting us. We will be in touch as soon as possible.';
-		window.location.replace("http://google.com");
     }
     exit(0);
-}
 
 function getEmailType($email_type) {
     $isHTML = false;
