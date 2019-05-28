@@ -3,15 +3,11 @@ if(!isset($_POST['Name'])) {
     exit(0);
 }
 
-define('CONFIGFILE', 'php/formConfiguration.php');
-define('VALIDATEFILE', 'php/formValidator.php');
-define('PHPMAILER', 'php/class.phpmailer.php');
-define('PHPMAILERSMTP', 'php/class.smtp.php');
-<<<<<<< HEAD
-define('EMAILTEMPLATEFILE', 'php/emailTemplate.html');
-=======
+define('CONFIGFILE', 'formConfiguration.php');
+define('VALIDATEFILE', 'formValidator.php');
+define('PHPMAILER', 'class.phpmailer.php');
+define('PHPMAILERSMTP', 'class.smtp.php');
 define('EMAILTEMPLATEFILE', 'emailTemplate.html');
->>>>>>> 0d95e47c6b722e03b3975d259c7f0049100d5dce
 
 // check all fields have been supplied by the form
 $form_fields = array(
