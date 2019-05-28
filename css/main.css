@@ -2888,7 +2888,7 @@ footer a {
  * ## Call To Action support
  * ------------------------------------------------------------------- */
 
-#call-to-action-support {
+#support {
     padding-top: 8.1rem;
     padding-bottom: 6rem;
     background-image: url(../images/bgg.jpg);
@@ -2897,38 +2897,38 @@ footer a {
     background-size: cover;
 }
 
-#call-to-action-support .action {
+#support .action {
     margin-top: 12px;
 }
 
-#call-to-action-support h2 {
+#support h2 {
     font: 34px/42px "Quicksand-bold", sans-serif;
     color: #9EBDDB;
     letter-spacing: -1px;
     margin-bottom: 3px;
 }
 
-#call-to-action-support h2 a {
+#support h2 a {
     color: inherit;
 }
 
-#call-to-action-support p,
-#call-to-action-support td {
+#support p,
+#support td {
     font-size: 17px;
     color: #A8A8A8;
 }
 
-#call-to-action-support .button {
+#support .button {
     background: #9EBDDB;
 }
 
-#call-to-action-support .button:hover,
-#call-to-action-support .button:active {
+#support .button:hover,
+#support .button:active {
     background: #A8A8A8;
     color: #485B6E;
 }
 
-#call-to-action-support p span {
+#support p span {
     font-family: "Quicksand-bold", sans-serif;
     color: #9EBDDB;
 }
