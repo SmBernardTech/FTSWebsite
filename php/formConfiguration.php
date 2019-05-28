@@ -43,3 +43,4 @@ $show_users_ip = "yes";
 
 // Use GDPR or require consent
 $use_gdpr = "no";
+?>
