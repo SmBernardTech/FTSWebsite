@@ -1,37 +1,33 @@
-## Welcome to GitHub Pages
+# ![Alt](images/logo.png "FTS")
+## Founded in 1997 by Michael Fine, Fine Technology Solutions is everything an effective IT partner should be! 
+## As your IT partner, we are always ready to help with any size technology problem or device.
 
-You can use the [editor on GitHub](https://github.com/mojopixie/FTSWebsite/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+* IT Infrastructure
+* IT Management 
+* On-Site & Remote Support
+* CyberSecurity			
+* Software Solutions & Development
+* FullStack Web Development
+* Mobile Development
+* UI/UX Design
+* Cloud Architecture
+* Social Media
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+### We have years of hands-on experience working with a wide range of clients--from home-based businesses to large enterprises.
+### Our commitment ensures a stable, secure computing environment, fast response times, and access to IT experts using a suite of world-class support tools.
+### As your IT partner, we are always ready to help with any size technology problem or device.
+### As your preferred software developer, we work within your budget to get high quality professional results.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+###	 ![Alt](images/FTSlogo.png "FTS")
+## Your Technology Solutions Provider!
+~~~~
+ +1 (800) 910-FINE
 
-- Bulleted
-- List
+ (760) 274-2370
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/mojopixie/FTSWebsite/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+ San Diego, CA 
+~~~~
+ 
