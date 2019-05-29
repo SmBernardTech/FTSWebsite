@@ -14,7 +14,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 define('INSTALLFILE', 'php/installationForm.php');
-define('CONFIGFILE', 'php/formConfiguration.php');
+define('CONFIGFILE', 'formConfiguration.php');
 define('FORMFILE', 'contactForm.htm');
 define('ABSPATH', dirname(__FILE__) . '/');
 
