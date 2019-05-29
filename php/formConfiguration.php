@@ -26,8 +26,8 @@ $smtp_port = "465";
 // Generate your keys at: https://www.google.com/recaptcha/intro/index.html
 // set value to "yes" or "no"
 $use_recaptcha = "yes";
-$sitekey = "6LeEkxwTAAAAABnTl_ntVp9Sy6LbcllbFDgLHysA";
-$privatekey = "6LeEkxwTAAAAAH-EMmZz5VjYNqlg2Ack7XsbhBuN";
+$sitekey = "6LcmAaYUAAAAAGeppSM73ZxhZjrZmprBSrMphZpt";
+$privatekey = file_get_contents('..\recaptcha_secret.txt');
 
 // If you have problems getting SMTP to work
 // switch on debugging output
