@@ -138,6 +138,7 @@ function sendEmail() {
         echo 'Thank you for contacting us. We will be in touch as soon as possible.';
     }
     exit(0);
+}
 
 function getEmailType($email_type) {
     $isHTML = false;
