@@ -24,10 +24,11 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animate.css">
 
     <!-- script    ================================================== -->
     <script src="js/modernizr.js"></script>
-    <script src="js/formValidator.js"></script>
+    <!-- <script src="js/formValidator.js"></script> -->
 
     <!-- favicons    ================================================== -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -432,7 +433,6 @@
 
                         <div class="form-group">
                             <div class="col-sm-10">
-                                <!-- &emsp;&emsp;&emsp;&nbsp;&nbsp; -->
                                 <input type="checkbox" id="Consent" name="Consent" value="given">&emsp;I agree to be contacted
                             </div>
                         </div>
@@ -440,7 +440,6 @@
 
                         <div class="form-group">
                             <div class="col-sm-10">
-                                <!-- &emsp;&emsp;&emsp;&nbsp;&nbsp; -->
                                 <div class="g-recaptcha" data-sitekey="6LcmAaYUAAAAAGeppSM73ZxhZjrZmprBSrMphZpt"></div>
                             </div>
                         </div>
@@ -456,6 +455,50 @@
             </div>
         </div>
     </section>
+
+    <!-- NEW Contact Form Section   ================================================== -->
+    <section id="newContactForm">
+        <div class="contactContainer">
+            <h2>NEW Contact Us</h2><br>
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3">
+                    <!-- <div class="well" style="margin-top: 10%;"> -->
+                    <h3>We'd love to hear from you!</h3>
+                    <form role="form" id="newContact" data-toggle="validator" class="shake">
+
+                        <div class="row">
+
+                            <div class="form-group col-sm-6">
+                                <label for="name" class="h4">Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter name" required data-error="NEW ERROR MESSAGE">
+                                <div class="help-block with-errors"></div>
+                            </div>
+
+                            <div class="form-group col-sm-6">
+                                <label for="email" class="h4">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                                <div class="help-block with-errors"></div>
+                            </div>
+
+                            <label for="message" class="h4 ">Message</label>
+                            <textarea id="message" class="form-control" rows="5" placeholder="Enter your message" required></textarea>
+                            <div class="help-block with-errors"></div>
+                        </div>
+
+                        <button type="submit" id="form-submit" class="btn btn-success btn-lg pull-right ">Submit</button>
+                        <div id="msgSubmit" class="h3 text-center hidden"></div>
+                        <div class="clearfix"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- </div> -->
+        <!--/.container -->
+    </section>
+
+
+
+
 
 
     <!-- Call-to-Action-Support Section    ================================================== -->
@@ -496,9 +539,9 @@
 
                 <!-- SMB add link eventually -->
                 <div class="smb">
-                    <!-- <a href="https://mojopixie.github.io/mojopixieInnovations/"> -->
-                    <!-- <p>SmB 2019</p> -->
-                    <!-- </a> -->
+                    <a href="https://mojopixie.com/">
+                        <p>SmB 2019</p>
+                    </a>
                 </div>
             </div>
         </div>
@@ -515,9 +558,11 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/formValidatorConsent.js"></script>
-    <script src="js/formValidatorInstallation.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script type="text/javascript" src="js/validator.min.js"></script>
+    <script type="text/javascript" src="js/form-scripts.js"></script>
+    <!-- <script src="js/formValidatorConsent.js"></script>
+    <script src="js/formValidatorInstallation.js"></script> -->
+    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
 
 </body>
 
