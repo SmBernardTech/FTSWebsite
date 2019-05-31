@@ -2992,7 +2992,7 @@ footer a {
 #message.form-control:hover,
 #message.form-control:active,
 #message.form-control:focus {
-    background: #fff;
+    background: #000;
 }
 
 #contactForm3 {
@@ -3001,16 +3001,18 @@ footer a {
     text-align: center;
     position: relative;
     background-size: cover;
+    align-items: center;
     padding: 5%;
 }
 
 .content-w3ls {
-    width: 75%;
+    width: 50%;
     margin: 0 auto;
     background: #080A0C;
     text-align: center;
+    align-items: center;
     /* padding: 30px 0 0; */
-    padding: 2%;
+    padding: 1%;
 }
 
 .form-w3ls {
@@ -3022,7 +3024,7 @@ h1.agile {
     text-transform: uppercase;
     text-align: center;
     margin-top: 50px;
-    color: #080A3E;
+    color: #9EBDDB;
     font-size: 44px;
     font-weight: 600;
     font-family: "Quicksand", sans-serif;
@@ -3034,7 +3036,7 @@ h1.agile {
     font-weight: 400;
     text-align: center;
     color: #9EBDDB;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
     font-family: "Quicksand", sans-serif;
 }
 
@@ -3049,7 +3051,7 @@ input[type="text"],
 input[type="email"],
 textarea {
     display: block;
-    margin: 2%;
+    margin: 2% 2% 3% 2%;
     width: 96%;
     align-items: center;
     padding: 10px;
@@ -3063,15 +3065,7 @@ textarea {
     margin-bottom: 30px;
 }
 
-input[type="text"],
-input[type="email"],
-textarea:hover,
-input[type="text"],
-input[type="email"],
-textarea:active,
-input[type="text"],
-input[type="email"],
-textarea:focus {
+textarea:hover {
     background: #fff;
 }
 
