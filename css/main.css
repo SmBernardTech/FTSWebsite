@@ -108,7 +108,9 @@
 
 #contact-form h2 {
     color: #9EBDDB;
-    font: 34px/42px "Quicksand-bold", sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 3.7rem;
+    font-weight: 600;
 }
 
 #contact-form h4 {
@@ -2959,66 +2961,55 @@ footer a {
     color: #9EBDDB;
 }
 
-
-/* ------------------------------------------------------------------- 
- * ###FORMS 
- * ------------------------------------------------------------------- */
-
-form {
-    /* margin: 100px; */
-    margin-left: auto;
-    margin-right: auto;
-    width: auto;
-    display: inline-block;
+#contact-form {
+    box-shadow: 0 3px 15px rgba(0, 0, 0, .2);
+    background-color: #121212;
+    text-align: center;
+    position: relative;
 }
 
-input[type="captcha"],
-input[type="tel"],
-input[type="text"],
-input[type="password"],
-input[type="email"],
-textarea,
-select {
-    display: block;
-    padding: 5px;
-    border: 0;
-    outline: none;
-    min-width: 100px;
-    max-width: 100%;
-    font-size: 16px;
-    line-height: 24px;
-    color: #EDEDED;
-    background: #3D4145;
+
+/* #acc4c6;121212 080A3E;#485B6E*/
+
+#contact-form .card {
+    margin: 5%;
+    padding: 5%;
+    background-color: #04090D;
+    border-color: #000;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, .2);
+    border-top-left-radius: 2.5rem;
+    border-bottom-left-radius: 2.5rem;
+    border-top-right-radius: 2.5rem;
+    border-bottom-right-radius: 2.5rem;
 }
 
-input[type="captcha"],
-input[type="tel"]:focus,
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="email"]:focus,
-textarea:focus {
-    color: #EDEDED;
-    background-color: #3d4145;
-}
-
-textarea {
-    min-height: 180px;
-}
-
-label,
-legend {
-    font: 20px/24px opensans-bold, sans-serif;
-    margin: 12px 0;
+.card h2 {
     color: #9EBDDB;
-    display: block;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 800;
+    font-size: 4.6rem;
+    line-height: 1.5;
+    letter-spacing: -0.03rem;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
-    font-size: 15px;
-    color: #6E6E6E;
+.card h3 {
+    color: #EDEDED;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 1.5;
+    letter-spacing: -0.03rem;
+    margin-top: 0;
+    margin-bottom: 4.8rem;
+    text-align: center;
 }
 
-input[type="checkbox"] {
-    display: inline;
+.card p {
+    color: #485B6E;
+    font-weight: 400;
+    font-size: 18px;
+    text-align: left;
 }

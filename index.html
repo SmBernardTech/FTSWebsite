@@ -333,6 +333,7 @@
     <!-- end s-services -->
 
 
+
     <!-- contact    ================================================== -->
     <section id="contact" class="s-contact target-section">
         <div class="row section-header bit-narrow" data-aos="fade-up">
@@ -367,133 +368,67 @@
 
 
     <!-- Contact Form Section   ================================================== -->
-    <section id="contact-form">
 
-        <div class="container">
-            <div class="row">
+    <section id="contact-form" class="s-contact target-section">
+        <div class="row section-header bit-narrow" data-aos="fade-up">
+            <!-- <body id="contactFormPage">  -->
+            <!-- <section id="contactForm2"> -->
 
-                <div class="col-md-3">
-                    <div class="contact-form"><br>
-                        <img src="images/mail.png" alt="Image of envelope" />
-                        <h2>Contact Us</h2><br>
-                        <h4>We would love to hear from you !</h4><br><br>
-                        <p>* denotes required field</p>
-                    </div>
+
+            <div class="card">
+                <div class="row">
+                    <img src="images/mail.png" style="align-content: left" alt="Image of envelope" />
+                    <h2 class="card-title">Contact Us</h2>
                 </div>
+                <h3>We'd love to hear from you!</h3>
 
-                <div class="col-md-9">
+                <p>* denotes required field</p>
 
-                    <form id="contactForm" class="form-horizontal" method="post" action="php/formProcess.php">
+                <form role="form" id="contactForm" data-toggle="validator" class="shake">
 
-                        <div class="form-group">
-                            <label for="Name" class="col-sm-2 control-label">
-                                <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
-                            </label>
-                            <div class="col-sm-10">
-                                <div class="input-group">
-                                    <input type="text" id="Name" name="Name" class="form-control" placeholder="Name *">
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="Email" class="col-sm-2 control-label">
-                                <span class="input-group-addon"><i class="fa fa-envelope fa-fw"></i></span>
-                            </label>
-                            <div class="col-sm-10">
-                                <div class="input-group">
-                                    <input type="email" id="Email" name="Email" class="form-control" placeholder="Email *">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="Phone" class="col-sm-2 control-label">
-                                <span class="input-group-addon"><i class="fa fa-phone fa-fw"></i></span>
-                            </label>
-                            <div class="col-sm-10">
-                                <div class="input-group">
-                                    <input type="text" id="Phone" name="Phone" class="form-control" placeholder="Phone *">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="Message" class="col-sm-2 control-label">
-                                <span class="input-group-addon"><i class="fa fa-comment fa-fw"></i></span>
-                            </label>
-                            <div class="col-sm-10">
-                                <div class="input-group">
-                                    <textarea id="Message" name="Message" class="form-control" placeholder="Message *" rows="4"></textarea>
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <input type="checkbox" id="Consent" name="Consent" value="given">&emsp;I agree to be contacted
-                            </div>
-                        </div>
-
-
-                        <div class="form-group">
-                            <div class="col-sm-10">
-                                <div class="g-recaptcha" data-sitekey="6LcmAaYUAAAAAGeppSM73ZxhZjrZmprBSrMphZpt"></div>
-                            </div>
-                        </div>
-
-
-                        <div class="form-group">
-                            <button type="submit" style="float: left" class="btn btn-default1">Submit</button>
-                            <!-- <button type="submit" class="smoothscroll btn btn--primary btn--large">Submit</button> -->
-                        </div>
-
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- NEW Contact Form Section   ================================================== -->
-    <section id="newContactForm">
-        <div class="contactContainer">
-            <h2>NEW Contact Us</h2><br>
-            <div class="row">
-                <div class="col-sm-6 col-sm-offset-3">
-                    <!-- <div class="well" style="margin-top: 10%;"> -->
-                    <h3>We'd love to hear from you!</h3>
-                    <form role="form" id="newContact" data-toggle="validator" class="shake">
-
-                        <div class="row">
-
-                            <div class="form-group col-sm-6">
-                                <label for="name" class="h4">Name</label>
-                                <input type="text" class="form-control" id="name" placeholder="Enter name" required data-error="NEW ERROR MESSAGE">
-                                <div class="help-block with-errors"></div>
-                            </div>
-
-                            <div class="form-group col-sm-6">
-                                <label for="email" class="h4">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="Enter email" required>
-                                <div class="help-block with-errors"></div>
-                            </div>
-
-                            <label for="message" class="h4 ">Message</label>
-                            <textarea id="message" class="form-control" rows="5" placeholder="Enter your message" required></textarea>
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label for="name" class="sr-only">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter Name *" required data-error="Name required">
                             <div class="help-block with-errors"></div>
                         </div>
+                    </div>
 
-                        <button type="submit" id="form-submit" class="btn btn-success btn-lg pull-right ">Submit</button>
-                        <div id="msgSubmit" class="h3 text-center hidden"></div>
-                        <div class="clearfix"></div>
-                    </form>
-                </div>
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label for="email" class="sr-only">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter Email *" required data-error="Email required">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="message" class="sr-only">Message</label>
+                        <textarea id="message" class="form-control" rows="5" placeholder="Enter Message *" required data-error="Message required"></textarea>
+                        <div class="help-block with-errors"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group">
+                            <button type="submit" id="form-submit" style="float: right" class="btn btn--primary btn--large">SUBMIT</button>
+                            <div id="msgSubmit" class="h3 text-center hidden"></div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </form>
+
             </div>
+
         </div>
-        <!-- </div> -->
-        <!--/.container -->
+
+
+
+
+
+        <!--<div class="card"> -->
+
+        <!--<div class="col-sm-6 col-sm-offset-3">-->
     </section>
 
 
@@ -501,8 +436,12 @@
 
 
 
-    <!-- Call-to-Action-Support Section    ================================================== -->
-    <!-- <section id="call-to-action-support"> -->
+
+
+
+
+
+    <!-- Support Section    ================================================== -->
     <section id="support">
 
         <div class="row">
@@ -512,7 +451,7 @@
                 <table>
                     <tr>
                         <label class="sr-only" for="form_message">Name</label>
-                        <td><input id="name" type="text" name="name" placeholder="Name"></td>
+                        <td><input id="supportName" type="text" name="name" placeholder="Name"></td>
                     </tr>
                     <tr>
                         <label class="sr-only" for="form_message">Number</label>
@@ -527,7 +466,7 @@
         </div>
 
     </section>
-    <!-- Call-to-Action Support Section End-->
+    <!-- Support Section End-->
 
 
     <!-- footer    ================================================== -->
