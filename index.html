@@ -142,7 +142,7 @@
 
             <div class="home-content__scroll">
                 <a href="#about" class="scroll-link smoothscroll" style="font-size: 150%">
-                    &#x2190;</a>
+                    &#x21E6;</a>
             </div>
 
         </div>
@@ -368,14 +368,14 @@
 
 
     <!-- Contact Form Section   ================================================== -->
-
+    <!-- 
     <section id="contact-form" class="s-contact target-section">
-        <div class="row section-header bit-narrow" data-aos="fade-up">
-            <!-- <body id="contactFormPage">  -->
-            <!-- <section id="contactForm2"> -->
+        <div class="row section-header bit-narrow" data-aos="fade-up"> -->
+    <!-- <body id="contactFormPage">  -->
+    <!-- <section id="contactForm2"> -->
 
 
-            <div class="card">
+    <!-- <div class="card">
                 <div class="row">
                     <img src="images/mail.png" style="align-content: left" alt="Image of envelope" />
                     <h2 class="card-title">Contact Us</h2>
@@ -420,20 +420,61 @@
 
             </div>
 
+        </div> -->
+
+
+
+
+
+    <!--<div class="card"> -->
+
+    <!--<div class="col-sm-6 col-sm-offset-3">-->
+    <!-- </section> -->
+
+
+
+    <section id="contactForm3">
+        <div class="container">
+
+            <img src="images/mail.png" style="align-content: left" alt="Image of envelope">
+            <h1 class="agile">Contact Us</h1>
+
+            <br>
+            <div class="content-w3ls">
+                <form role="form" id="form" data-toggle="validator" class="shake">
+
+                    <!-- <form action="#" method="post" class="form-agile"> -->
+                    <h2>We'd love to hear from you!</h2>
+                    <p>* denotes required field</p><br>
+
+
+                    <!-- <input type="text" id="name" name="name" placeholder="Name" title="Enter Name" required=""> -->
+                    <label for="name" class="sr-only">Name</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Enter Name *" title="Enter Name" required data-error="Name required">
+                    <div class="help-block with-errors"></div>
+
+
+
+                    <!-- <input type="email" id="email" name="email" placeholder="Email" title="Enter Email" required=""> -->
+                    <label for="email" class="sr-only">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email *" title="Enter Email" required data-error="Email required">
+                    <div class="help-block with-errors"></div>
+
+
+                    <!-- <textarea id="message" name="message" placeholder="Message" title="Enter Message"></textarea> -->
+                    <label for="message" class="sr-only">Message</label>
+                    <textarea id="message" name="message" class="form-control" rows="5" placeholder="Enter Message *" title="Enter Message" required data-error="Message required"></textarea>
+                    <div class="help-block with-errors"></div>
+
+
+                    <!-- <button type="submit" style="float: right" class="submitMsg">SUBMIT</button> -->
+                    <input type="submit" id="form-submit" class="submitMsg" value="Submit"><br>
+                    <div id="msgSubmit" class="h3 text-center hidden"></div>
+                    <div class="clearfix"></div>
+                </form>
+            </div>
         </div>
-
-
-
-
-
-        <!--<div class="card"> -->
-
-        <!--<div class="col-sm-6 col-sm-offset-3">-->
     </section>
-
-
-
-
 
 
 
@@ -487,11 +528,9 @@
 
         <!-- Back To Top Button -->
         <div class="ss-go-top1">
-            <a class="smoothscroll" title="Back to Top" href="#top">Top</a>
+            <a class="smoothscroll" title="Back to Top" style="font-size: 150%" href="#top">&#x21E7;</a>
         </div>
     </footer>
-
-
 
     <!-- Java Script   ================================================== -->
     <script src="js/jquery-3.2.1.min.js"></script>
