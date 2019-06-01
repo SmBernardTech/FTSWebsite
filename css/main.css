@@ -3331,3 +3331,20 @@ input.submitMsg:hover {
         display: none;
     }
 }
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+#msgSubmit.h3 {
+    font-size: 16px;
+    margin: 0 0 10px 30px;
+    text-align: center;
+    color: #c66668;
+}
+
+#contactForm3 ul {
+    margin: 0 0 10px 30px;
+    text-align: left;
+    font-size: 18px;
+    color: #c66668;
+}
