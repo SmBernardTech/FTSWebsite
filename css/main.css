@@ -2992,7 +2992,7 @@ footer a {
 #message.form-control:hover,
 #message.form-control:active,
 #message.form-control:focus {
-    background: #000;
+    background: #fff;
 }
 
 #contactForm3 {
@@ -3126,7 +3126,7 @@ input.submitMsg {
 }
 
 input.submitMsg:hover {
-    background-color: #080A3E;
+    background-color: #fff;
 }
 
 
