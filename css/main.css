@@ -3003,6 +3003,7 @@ footer a {
     background-size: cover;
     align-items: center;
     padding: 5%;
+    color: #ededed;
 }
 
 .content-w3ls {
@@ -3015,7 +3016,7 @@ footer a {
     padding: 1%;
 }
 
-.form-w3ls {
+.content-w3ls .form-w3ls {
     width: 89%;
     margin: 0 auto 15px;
 }

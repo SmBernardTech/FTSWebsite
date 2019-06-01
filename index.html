@@ -376,14 +376,11 @@
             <h1 class="agile">Contact Us</h1>
 
             <div class="content-w3ls">
-                <!-- <form role="form" id="form" data-toggle="validator" class="shake"> -->
                 <form role="form" id="contactForm" data-toggle="validator" class="shake">
-                    <!-- <form action="#" method="post" class="form-agile"> -->
                     <h2>We'd love to hear from you!</h2>
                     <p>* denotes required field</p>
 
 
-                    <!-- <input type="text" id="name" name="name" placeholder="Name" title="Enter Name" required=""> -->
                     <div class="form-group">
                         <label for="name" class="sr-only">Name</label>
                         <input type="text" id="name" name="name" class="form-control" placeholder="Enter Name *" title="Enter Name" required data-error="Name required">
@@ -391,20 +388,31 @@
                     </div>
 
                     <div class="form-group">
-                        <!-- <input type="email" id="email" name="email" placeholder="Email" title="Enter Email" required=""> -->
+                        <label for="phone" class="sr-only">Phone</label>
+                        <input type="text" id="phone" name="phone" class="form-control" placeholder="Enter Phone *" title="Enter Phone" required data-error="Phone required">
+                        <div class="help-block with-errors"></div>
+                    </div>
+
+                    <div class="form-group">
                         <label for="email" class="sr-only">Email</label>
                         <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email *" title="Enter Email" required data-error="Email required">
                         <div class="help-block with-errors"></div>
                     </div>
 
                     <div class="form-group">
-                        <!-- <textarea id="message" name="message" placeholder="Message" title="Enter Message"></textarea> -->
                         <label for="message" class="sr-only">Message</label>
                         <textarea id="message" name="message" class="form-control" rows="5" placeholder="Enter Message *" title="Enter Message" required data-error="Message required"></textarea>
                         <div class="help-block with-errors"></div>
                     </div>
 
-                    <!-- <button type="submit" style="float: right" class="submitMsg">SUBMIT</button> -->
+                    <div class="form-group">
+                        <input type="checkbox" id="Consent" name="Consent" value="given">&emsp;I agree to be contacted
+                    </div>
+
+                    <div class="form-group">
+                        <div class="g-recaptcha" style="margin: 10px" data-sitekey="6LcmAaYUAAAAAGeppSM73ZxhZjrZmprBSrMphZpt"></div>
+                    </div>
+
                     <input type="submit" id="form-submit" class="submitMsg" value="Submit"><br>
                     <div id="msgSubmit" class="text-center hidden"></div>
                     <div class="clearfix"></div>
@@ -472,7 +480,7 @@
     <script type="text/javascript" src="js/form-scripts.js"></script>
     <!-- <script src="js/formValidatorConsent.js"></script>
     <script src="js/formValidatorInstallation.js"></script> -->
-    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 </body>
 
