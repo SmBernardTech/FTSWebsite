@@ -368,58 +368,117 @@
 
 
     <!-- Contact Form Section   ================================================== -->
+    <!-- 
+    <section id="contact-form" class="s-contact target-section">
+        <div class="row section-header bit-narrow" data-aos="fade-up"> -->
+    <!-- <body id="contactFormPage">  -->
+    <!-- <section id="contactForm2"> -->
+
+
+    <!-- <div class="card">
+                <div class="row">
+                    <img src="images/mail.png" style="align-content: left" alt="Image of envelope" />
+                    <h2 class="card-title">Contact Us</h2>
+                </div>
+                <h3>We'd love to hear from you!</h3>
+
+                <p>* denotes required field</p>
+
+                <form role="form" id="contactForm" data-toggle="validator" class="shake">
+
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label for="name" class="sr-only">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter Name *" required data-error="Name required">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label for="email" class="sr-only">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter Email *" required data-error="Email required">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="message" class="sr-only">Message</label>
+                        <textarea id="message" class="form-control" rows="5" placeholder="Enter Message *" required data-error="Message required"></textarea>
+                        <div class="help-block with-errors"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group">
+                            <button type="submit" id="form-submit" style="float: right" class="btn btn--primary btn--large">SUBMIT</button>
+                            <div id="msgSubmit" class="h3 text-center hidden"></div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+
+        </div> -->
+
+
+
+
+
+    <!--<div class="card"> -->
+
+    <!--<div class="col-sm-6 col-sm-offset-3">-->
+    <!-- </section> -->
+
+
 
     <section id="contactForm3">
         <div class="container">
 
+            <img src="images/mail.png" style="align-content: left" alt="Image of envelope">
             <h1 class="agile">Contact Us</h1>
 
+            <br>
             <div class="content-w3ls">
-                <form role="form" id="contactForm" data-toggle="validator" class="shake">
+                <form role="form" id="form" data-toggle="validator" class="shake onsubmit="return submitUserForm();"">
+
+                    <!-- <form action="#" method="post" class="form-agile"> -->
                     <h2>We'd love to hear from you!</h2>
-                    <p>All fields required</p>
+                    <p>* denotes required field</p><br>
 
+                    <!-- <input type="text" id="name" name="name" placeholder="Name" title="Enter Name" required=""> -->
+                    <label for="name" class="sr-only">Name</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Enter Name *" title="Enter Name" required data-error="Name required">
+                    <div class="help-block with-errors"></div>
 
-                    <div class="form-group">
-                        <label for="name" class="sr-only">Name</label>
-                        <input type="text" id="name" name="name" class="form-control" placeholder="Enter Name" title="Enter Name" required data-error="Name required">
-                        <div class="help-block with-errors"></div>
-                    </div>
+                    <!-- <input type="email" id="email" name="email" placeholder="Email" title="Enter Email" required=""> -->
+                    <label for="email" class="sr-only">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email *" title="Enter Email" required data-error="Email required">
+                    <div class="help-block with-errors"></div>
 
-                    <div class="form-group">
-                        <label for="phone" class="sr-only">Phone</label>
-                        <input type="text" id="phone" name="phone" class="form-control" placeholder="Enter Phone" title="Enter Phone" required data-error="Phone required">
-                        <div class="help-block with-errors"></div>
-                    </div>
+                    <!-- <textarea id="message" name="message" placeholder="Message" title="Enter Message"></textarea> -->
+                    <label for="message" class="sr-only">Message</label>
+                    <textarea id="message" name="message" class="form-control" rows="5" placeholder="Enter Message *" title="Enter Message" required data-error="Message required"></textarea>
+                    <div class="help-block with-errors"></div>
+                    
+                    <div class="g-recaptcha" data-sitekey="6LcmAaYUAAAAAGeppSM73ZxhZjrZmprBSrMphZpt" data-callback="verifyCaptcha"></div>
+                    <div id="g-recaptcha-error"></div>
 
-                    <div class="form-group">
-                        <label for="email" class="sr-only">Email</label>
-                        <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email" title="Enter Email" required data-error="Email required">
-                        <div class="help-block with-errors"></div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message" class="sr-only">Message</label>
-                        <textarea id="message" name="message" class="form-control" rows="5" placeholder="Enter Message" title="Enter Message" required data-error="Message required"></textarea>
-                        <div class="help-block with-errors"></div>
-                    </div>
-
-                    <div class="form-group">
-                        <input type="checkbox" id="Consent" name="Consent" value="given">&emsp;I agree to be contacted
-                    </div>
-
-                    <div class="form-group">
-                        <div class="g-recaptcha" style="margin: 2%" data-sitekey="6LcmAaYUAAAAAGeppSM73ZxhZjrZmprBSrMphZpt"></div>
-                    </div>
-
+                    <!-- <button type="submit" style="float: right" class="submitMsg">SUBMIT</button> -->
                     <input type="submit" id="form-submit" class="submitMsg" value="Submit"><br>
-                    <div id="msgSubmit" class="text-center hidden"></div>
+                    <div id="msgSubmit" class="h3 text-center hidden"></div>
                     <div class="clearfix"></div>
                 </form>
             </div>
         </div>
     </section>
-    <!-- Contact Form Section End-->
+
+
+
+
+
+
 
     <!-- Support Section    ================================================== -->
     <section id="support">
@@ -427,7 +486,7 @@
         <div class="row">
             <h2>Need Remote Support?</h2><br>
             <!-- <onload="document.forms[0].name.focus();"> -->
-            <form method="post" action="https://www.fastsupport.com/servlet/download/customerDownload" name="ssid" target="_blank">
+            <form method="post" action="https://www.fastsupport.com/servlet/download/customerDownload" name="ssid">
                 <table>
                     <tr>
                         <label class="sr-only" for="form_message">Name</label>
@@ -458,9 +517,9 @@
 
                 <!-- SMB add link eventually -->
                 <div class="smb">
-                    <!-- <a href="https://mojopixie.com/" target="_blank"> -->
-                    <p>SmB 2019</p>
-                    <!-- </a> -->
+                    <a href="https://mojopixie.com/">
+                        <p>SmB 2019</p>
+                    </a>
                 </div>
             </div>
         </div>
@@ -477,9 +536,23 @@
     <script src="js/main.js"></script>
     <script type="text/javascript" src="js/validator.min.js"></script>
     <script type="text/javascript" src="js/form-scripts.js"></script>
+    <script>
+        function submitUserForm() {
+            var response = grecaptcha.getResponse();
+            if(response.length == 0) {
+                document.getElementById('g-recaptcha-error').innerHTML = '<span style="color:red;">This field is required.</span>';
+                return false;
+            }
+            return true;
+        }
+         
+        function verifyCaptcha() {
+            document.getElementById('g-recaptcha-error').innerHTML = '';
+        }
+    </script>
     <!-- <script src="js/formValidatorConsent.js"></script>
     <script src="js/formValidatorInstallation.js"></script> -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
 
 </body>
 
