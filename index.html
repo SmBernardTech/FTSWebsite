@@ -386,11 +386,11 @@
                         <div class="help-block with-errors"></div>
                     </div>
 
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         <label for="phone" class="sr-only">Phone</label>
                         <input type="text" id="phone" name="phone" class="form-control" placeholder="Enter Phone" title="Enter Phone" required data-error="Phone required">
                         <div class="help-block with-errors"></div>
-                    </div>
+                    </div> -->
 
                     <div class="form-group">
                         <label for="email" class="sr-only">Email</label>
@@ -405,12 +405,15 @@
                     </div>
 
                     <div class="form-group">
-                        <input type="checkbox" id="Consent" name="Consent" value="given">&emsp;I agree to be contacted
+                        <input type="checkbox" id="Consent" name="Consent" required value="given">&emsp;I agree to be contacted
+                        <div class="help-block with-errors"></div>
                     </div>
 
                     <div class="form-group">
                         <div class="g-recaptcha" style="margin: 2%" data-sitekey="6LcmAaYUAAAAAGeppSM73ZxhZjrZmprBSrMphZpt"></div>
-                    </div>
+                        <input class="form-control d-none" data-recaptcha="true" required data-error="Please complete the Captcha">
+                        <div class="help-block with-errors"></div>
+                </div>
 
                     <input type="submit" id="form-submit" class="submitMsg" value="Submit"><br>
                     <div id="msgSubmit" class="text-center hidden"></div>
