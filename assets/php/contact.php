@@ -1,6 +1,6 @@
 <?php
 // require ReCaptcha class
-require('recaptcha-master/src/autoload.php');
+require('assets/recaptcha/recaptcha-master/src/autoload.php');
 
 // configure
 // an email address that will be in the From field of the email.
@@ -10,17 +10,17 @@ $from = 'mfine@fineonline.com';
 $sendTo = 'mfine@fineonline.com';
 
 // subject of the email
-$subject = "New message from website's contact form";
+$subject = "New message from fineOnlione.com's contact form";
 
 // form field names and their translations.
 // array variable name => Text to appear in the email
 $fields = array('name' => 'Name', 'surname' => 'Surname', 'phone' => 'Phone', 'email' => 'Email', 'message' => 'Message');
 
 // message that will be displayed when everything is OK :)
-$okMessage = 'Message submitted. <br>  Thank you; I will get back to you soon!';
+$okMessage = 'Message submitted.<br> Thank you; I will get back to you soon!';
 
 // If something goes wrong, we will display this message.
-$errorMessage = 'There was an error while submitting the form. Please try again.';
+$errorMessage = 'Form Submission Error.<br> Please try again.';
 
 // ReCaptcha Secret
 $recaptchaSecret = '6LcmAaYUAAAAANKWx5uat27E8U6iAV-8H_Dkf2Bo';
@@ -54,7 +54,7 @@ try {
         }
         
         // everything went well, we can compose the message, as usual        
-        $emailText = "You have a new message from your contact form\n=============================\n";
+        $emailText = "You have a new message from your website's contact form\n================================================\n";
 
         foreach ($_POST as $key => $value) {
             // If the field exists in the $fields array, include it in the email
