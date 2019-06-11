@@ -1372,7 +1372,6 @@ body.menu-is-open {
 
 .header-nav__list a::before {
     display: block;
-    /* content: counter(ctr, decimal-leading-zero) "."; */
     counter-increment: ctr;
     font-family: "Quicksand", sans-serif;
     font-size: 11px;
@@ -2210,6 +2209,68 @@ html.no-csstransitions .home-content__main {
 }
 
 
+/* ------------------------------------------------------------------- 
+ *  ##Responsive: ABOUT
+ * ------------------------------------------------------------------- */
+
+@media only screen and (max-width:1000px) {
+    .item-process:nth-child(2n+1) {
+        padding-right: 25px;
+    }
+    .item-process:nth-child(2n+2) {
+        padding-left: 25px;
+    }
+}
+
+@media only screen and (max-width:1000px) {
+    .s-about {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    .item-process:nth-child(n) {
+        padding: 0 15px;
+        min-height: 0;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .s-about {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    .process h4 {
+        padding-left: 6rem;
+    }
+    .process h4::before {
+        font-size: 1.8rem;
+        height: 42px;
+        width: 42px;
+        line-height: 42px;
+        top: -4px;
+    }
+    .item-process:nth-child(n) {
+        padding: 0 10px;
+    }
+}
+
+@media only screen and (max-width:400px) {
+    .process h4 {
+        padding-left: 5.8rem;
+    }
+    .process h4::before {
+        font-size: 1.6rem;
+        height: 39px;
+        width: 39px;
+        line-height: 39px;
+        top: -5px;
+    }
+    .item-process:nth-child(n) {
+        padding: 0;
+        margin-bottom: 1.5rem;
+    }
+}
+
+
 /* ===================================================================
  * ###ABOUT
  *
@@ -2273,68 +2334,6 @@ html.no-csstransitions .home-content__main {
 }
 
 
-/* ------------------------------------------------------------------- 
- *  ##Responsive: HOME
- * ------------------------------------------------------------------- */
-
-@media only screen and (max-width:1000px) {
-    .item-process:nth-child(2n+1) {
-        padding-right: 25px;
-    }
-    .item-process:nth-child(2n+2) {
-        padding-left: 25px;
-    }
-}
-
-@media only screen and (max-width:1000px) {
-    .s-about {
-        padding-top: 5rem;
-        padding-bottom: 5rem;
-    }
-    .item-process:nth-child(n) {
-        padding: 0 15px;
-        min-height: 0;
-    }
-}
-
-@media only screen and (max-width:600px) {
-    .s-about {
-        padding-top: 5rem;
-        padding-bottom: 5rem;
-    }
-    .process h4 {
-        padding-left: 6rem;
-    }
-    .process h4::before {
-        font-size: 1.8rem;
-        height: 42px;
-        width: 42px;
-        line-height: 42px;
-        top: -4px;
-    }
-    .item-process:nth-child(n) {
-        padding: 0 10px;
-    }
-}
-
-@media only screen and (max-width:400px) {
-    .process h4 {
-        padding-left: 5.8rem;
-    }
-    .process h4::before {
-        font-size: 1.6rem;
-        height: 39px;
-        width: 39px;
-        line-height: 39px;
-        top: -5px;
-    }
-    .item-process:nth-child(n) {
-        padding: 0;
-        margin-bottom: 1.5rem;
-    }
-}
-
-
 /* ===================================================================
  * ###SERVICES
  *
@@ -2360,7 +2359,7 @@ html.no-csstransitions .home-content__main {
     height: 100%;
     opacity: .3;
     background-color: #202224;
-    background-image: url(../assets/images/bg/bg2pattern.jpg);
+    background-image: url(../images/bg/bg2pattern.jpg);
     background-size: 760px 380px;
 }
 
@@ -2693,7 +2692,7 @@ footer {
     position: relative;
     padding-top: 9rem;
     padding-bottom: 4rem;
-    background-image: url(../assets/images/bg/bg4footer.jpg);
+    background-image: url(../images/bg/bg4footer.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: inherit;
@@ -2703,9 +2702,9 @@ footer a {
     color: #FFFFFF;
 }
 
-.smb p {
+.smb a {
     font-family: 'Dr Sugiyama', cursive;
-    font-size: 100%;
+    font-size: 120%;
     color: #acc4c6;
     margin-right: 15px;
     box-sizing: unset;
@@ -2847,7 +2846,7 @@ footer a {
 #support {
     padding-top: 8.1rem;
     padding-bottom: 6rem;
-    background-image: url(../assets/images/bg/bg3support.jpg);
+    background-image: url(../images/bg/bg3support.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;

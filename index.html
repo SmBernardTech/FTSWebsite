@@ -1,45 +1,59 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en">
 
 <head>
 
     <!--- basic page needs    ================================================== -->
     <meta charset="utf-8">
     <title>Fine Technology Solutions</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta name="description" content="Fine Technology Solutions: Your Technology Solutions Provider &amp; IT, Cybersecurity, Software, Mobile, UI/UX, Cloud, and more!">
     <meta name="author" content="Susan M Bernard | mojopixieInnovations">
 
-    <link rel="canonical" href="https://fineonline.com/" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:type" content="company" />
-    <meta property="og:url" content="https://fineonline.com/" />
-    <meta property="og:title" content="Fine Technology Solutions Company Website" />
-    <meta property="og:description" content="IT, Cybersecurity, Software, Mobile, UI/UX, Cloud, and more!" />
+    <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+    <link rel="canonical" href="https://fineonline.com/">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="company">
+    <meta property="og:title" content="Fine Technology Solutions: Your Technology Solutions Provider">
+    <meta property="og:url" content="https://fineonline.com/">
+    <meta property="og:description" content="Fine Technology Solutions: IT, Cybersecurity, Mobile, Web, & Software Development, UI/UX, Cloud Architecture, and much more!">
 
+    <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
+    <!-- <meta name="twitter:site" content="@FineTechnology"> -->
+    <!-- <meta name="twitter:creator" content="@FineTechnology"> -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Fine Technology Solutions: Your Technology Solutions Provider">
+    <meta name="twitter:image" content="assets/images/logos/1200xLogo.png">
+    <meta name="twitter:description" content="Fine Technology Solutions: IT, Cybersecurity, Mobile, Web, & Software Development, UI/UX, Cloud Architecture, and much more! Contact: 1.800.910.3463">
 
-    <!-- mobile specific metas    ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts --see base.css-->
+
+    <!-- Main Stylesheet File -->
+    <link rel="stylesheet" href="assets/css/main.css">
 
     <!-- CSS    ================================================== -->
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/vendor.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
+
+
+    <!-- Libraries CSS Files -->
+    <!-- put in bootstrap min, micons, and fontawesome? -->
 
     <!-- script    ================================================== -->
     <script src="assets/js/modernizr.js"></script>
-    <!-- <script src="js/formValidator.js"></script> -->
 
-    <!-- favicons    ================================================== -->
-    <link rel="shortcut icon" href="assets/images/logo/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="assets/images/logo/favicon.ico" type="image/x-icon">
-
+    <!-- =======================================================
+         Author: SmBernard---mojopixieInnovations
+        ======================================================== -->
 </head>
-
 
 <body id="top">
 
-    <!-- preloader    ================================================== -->
+    <!-- Preloader -->
     <div id="preloader">
         <div id="loader" class="dots-jump">
             <div></div>
@@ -48,25 +62,22 @@
         </div>
     </div>
 
-    <!-- header    ================================================== -->
+    <!-- ================================ Page Content ================================ -->
+
+    <!-- ================================ #header ===================================== -->
     <header class="s-header">
 
         <div class="header-logo">
             <a class="site-logo" href="index.html">
-                <!--<img src="images/logo.svg" alt="Homepage"> -->
                 <img src="assets/images/logo/logo.svg" alt="Homepage">
             </a>
         </div>
-        <!-- end header-logo -->
 
         <nav class="header-nav">
-
             <a href="#home" class="header-nav__close" title="close"><span>Close</span></a>
-
             <h3>Navigate to</h3>
 
             <div class="header-nav__content">
-
                 <ul class="header-nav__list">
                     <li><a class="smoothscroll" href="#home" title="Home">Home</a></li>
                     <li><a class="smoothscroll" href="#about" title="About">About</a></li>
@@ -76,6 +87,7 @@
                 </ul>
 
                 <p>Visit us on social media!</p>
+
                 <ul class="header-nav__social">
                     <li>
                         <a href="https://www.facebook.com/Fine-Technology-Solutions-30509485897/" target="_blank">
@@ -96,56 +108,36 @@
                 </ul>
 
             </div>
-            <!-- end header-nav__content -->
-
         </nav>
-        <!-- end header-nav -->
 
         <a class="header-menu-toggle" href="#0">
             <span class="header-menu-icon"></span>
         </a>
 
     </header>
-    <!-- end s-header -->
+    <!-- ================================ end of Header section ======================= -->
 
-
-    <!-- home    ================================================== -->
+    <!-- ================================= #home ====================================== -->
     <section id="home" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="assets/images/bg/bg1hero.jpg" data-natural-width="3000" data-natural-height="2000" data-position-y="center">
         <div class="grid-overlay">
             <div></div>
         </div>
 
         <div class="home-content">
-
             <div class="row home-content__main">
-
-                <h1>
-                    <img class="img-responsive" src="assets/images/logo/FTS.svg" alt="Fine Technology Solutions">
-                </h1>
-
-                <h3>
-                    Your Technology Solutions Provider
-                </h3>
-
+                <h1><img class="img-responsive" src="assets/images/logo/FTS.svg" alt="Fine Technology Solutions"></h1>
+                <h3>Your Technology Solutions Provider</h3>
                 <div class="home-content__button">
-                    <a href="#about" class="smoothscroll btn btn--primary btn--large">
-                        About Us
-                    </a>
-                    <a href="#contact" class="smoothscroll btn btn--large">
-                        Contact Us
-                    </a>
+                    <a href="#about" class="smoothscroll btn btn--primary btn--large">About Us</a>
+                    <a href="#contact" class="smoothscroll btn btn--large">Contact Us</a>
                 </div>
-
             </div>
-            <!-- end home-content__main -->
 
             <div class="home-content__scroll">
                 <a href="#about" class="scroll-link smoothscroll" style="font-size: 150%">
                     &#x21E6;</a>
             </div>
-
         </div>
-        <!-- end home-content -->
 
         <ul class="home-social">
             <li>
@@ -166,13 +158,10 @@
             </li>
 
         </ul>
-        <!-- end home-social -->
-
     </section>
-    <!-- end s-home -->
+    <!-- ================================= end of Home section  ======================= -->
 
-
-    <!-- about    ================================================== -->
+    <!-- ================================ #about ====================================== -->
     <section id="about" class="s-about target-section">
 
         <div class="row section-header bit-narrow" data-aos="fade-up">
@@ -182,7 +171,6 @@
                 <h1 class="display-1">We are always ready to help with any size technology problem or device.</h1>
             </div>
         </div>
-        <!-- end section-header -->
 
         <div class="row bit-narrow" data-aos="fade-up">
             <div class="col-full">
@@ -193,11 +181,10 @@
                 <br />
             </div>
         </div>
-        <!-- end about-desc -->
     </section>
+    <!-- ================================ end of about section ======================== -->
 
-
-    <!-- services    ================================================== -->
+    <!-- =============================== #services ==================================== -->
     <section id="services" class="s-services target-section darker">
 
         <div class="row section-header bit-narrow" data-aos="fade-up">
@@ -208,7 +195,6 @@
                 </h1>
             </div>
         </div>
-        <!-- end section-header -->
 
         <div class="row bit-narrow services block-1-2 block-tab-full">
 
@@ -267,7 +253,6 @@
                 </div>
             </div>
 
-
             <!-- Item: FullStack Web Development -->
             <div class="col-block item-service" data-aos="fade-up">
                 <div class="item-service__icon"><i class="icon-lego-block"></i></div>
@@ -277,7 +262,6 @@
                 </div>
             </div>
 
-
             <!-- Item: Mobile Development -->
             <div class="col-block item-service" data-aos="fade-up">
                 <div class="item-service__icon"><i class="fas fa-mobile-alt"></i></div>
@@ -286,7 +270,6 @@
                     <p>Our US-based Agile development team creates your app, bringing you both quality and value. Your mobile presence is more critical than ever, with native apps bringing more views and better conversion rates.</p>
                 </div>
             </div>
-
 
             <!-- Item: UI/UX Design -->
             <div class="col-block item-service" data-aos="fade-up">
@@ -300,7 +283,6 @@
                 </div>
             </div>
 
-
             <!-- Item: Cloud Architecture -->
             <div class="col-block item-service" data-aos="fade-up">
                 <div class="item-service__icon">
@@ -312,7 +294,6 @@
                 </div>
             </div>
 
-
             <!-- Item: Social Media -->
             <div class="col-block item-service" data-aos="fade-up">
                 <div class="item-service__icon">
@@ -323,17 +304,11 @@
                     <p>Our social media specialists will help you get started in social media, provide tips and advice, and/or manage your entire social presence.</p>
                 </div>
             </div>
-
-
         </div>
-        <!-- end services -->
-
     </section>
-    <!-- end s-services -->
+    <!-- ======================= end of about services section========================= -->
 
-
-
-    <!-- contact    ================================================== -->
+    <!-- ============================== #contact-info ================================= -->
     <section id="contact" class="s-contact target-section">
         <div class="row section-header bit-narrow" data-aos="fade-up">
 
@@ -364,9 +339,9 @@
             </ul>
         </div>
     </section>
+    <!-- ======================== end of contact-info section ========================= -->
 
-
-    <!-- Contact Form Section   ================================================== -->
+    <!-- ============================== #contact-form ================================= -->
     <section id="contactForm" class="s-contactForm target-section">
 
         <div class="container">
@@ -376,12 +351,16 @@
                     <h2>We'd love to hear from you!</h2>
                     <p>All fields required</p>
 
+                    <!-- ============= FORM ============= -->
                     <form id="contact-form" method="post" action="contact.php" role="form">
+                        <!-- Where success/error message will show -->
                         <div class="messages"></div>
-
                         <div class="controls">
+
+                            <!-- Form Row 1 -->
                             <div class="row">
                                 <div class="col-lg-6">
+                                    <!-- First Name -->
                                     <div class="form-group">
                                         <label for="form_name" class="sr-only">First Name</label>
                                         <input id="form_name" type="text" name="name" class="form-control" placeholder="Enter First Name" required="required" data-error="First name required">
@@ -389,6 +368,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
+                                    <!-- Last Name -->
                                     <div class="form-group">
                                         <label for="form_lastname" class="sr-only">Last Name</label>
                                         <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Enter Last Name" required="required" data-error="Last name required">
@@ -396,8 +376,11 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- Form Row 2 -->
                             <div class="row">
                                 <div class="col-lg-6">
+                                    <!-- Email -->
                                     <div class="form-group">
                                         <label for="form_email" class="sr-only">Email</label>
                                         <input id="form_email" type="email" name="email" class="form-control" placeholder="Enter Email" required="required" data-error="Valid email required">
@@ -405,6 +388,7 @@
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
+                                    <!-- Phone -->
                                     <div class="form-group">
                                         <label for="form_phone" class="sr-only">Phone</label>
                                         <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Enter Phone" required="required" data-error="Valid phone required">
@@ -412,40 +396,36 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- Message -->
                             <div class="form-group">
                                 <label for="form_message" class="sr-only">Message</label>
                                 <textarea id="form_message" name="message" class="form-control" placeholder="Enter Message" rows="4" required="required" data-error="Message required"></textarea>
                                 <div class="help-block with-errors"></div>
                             </div>
 
+                            <!-- Recaptcha -->
                             <div class="form-group">
                                 <div class="g-recaptcha" data-sitekey="6LcmAaYUAAAAAGeppSM73ZxhZjrZmprBSrMphZpt" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
                                 <input class="form-control" data-recaptcha="true" required data-error="Captcha required">
                                 <div class="help-block with-errors"></div>
                             </div>
 
+                            <!-- Submit Button -->
                             <input type="submit" class="submitMsg" value="Send message">
                         </div>
-
                     </form>
-
                 </div>
-
             </div>
-
         </div>
-
-
     </section>
+    <!-- ======================= end of #contact-form section ========================= -->
 
-    <!-- Contact Form Section End-->
-
-    <!-- Support Section    ================================================== -->
+    <!-- ================================= #support =================================== -->
     <section id="support">
 
         <div class="row">
             <h2>Need Remote Support?</h2><br>
-            <!-- <onload="document.forms[0].name.focus();"> -->
             <form method="post" action="https://www.fastsupport.com/servlet/download/customerDownload" name="ssid" target="_blank">
                 <table>
                     <tr>
@@ -458,17 +438,14 @@
                     </tr>
                     <tr>
                         <td><button type="submit" style="margin-left: 0px" class="btn btn-default">Connect</button></td>
-                        <!-- <input type="submit" value="connect" style="column-fill:auto"> -->
                     </tr>
                 </table>
             </form>
         </div>
-
     </section>
-    <!-- Support Section End-->
+    <!-- ========================= end of #support section ============================ -->
 
-
-    <!-- footer    ================================================== -->
+    <!-- ================================ footer ====================================== -->
     <footer>
         <div class="row">
             <div class="col-full ss-copyright">
@@ -477,28 +454,36 @@
 
                 <!-- SMB add link eventually -->
                 <div class="smb">
-                    <!-- <a href="https://mojopixie.com/" target="_blank"> -->
-                    <p>SmB 2019</p>
-                    <!-- </a> -->
+                    <a class="smb" href="https://mojopixie.com" target="_blank" alt="mojopixie Innovations">
+                        mojopixieInnovations SmB ©2019</a>
                 </div>
             </div>
         </div>
 
-        <!-- Back To Top Button -->
+        <!-- =============================== scroll to top ============================ -->
         <div class="ss-go-top1">
             <a class="smoothscroll" title="Back to Top" style="font-size: 150%" href="#top">&#x21E7;</a>
         </div>
     </footer>
+    <!-- ================================ end of footer =============================== -->
 
-    <!-- Java Script   ================================================== -->
+    <!-- ============================ end of Page Content ============================= -->
+
+    <!-- ================================ Javascript Files ============================ -->
     <script src="assets/js/jquery-3.2.1.min.js"></script>
     <script src="assets/js/plugins.js"></script>
-    <script src="assets/js/main.js"></script>
     <script src="assets/js/modernizr.js"></script>
     <script src="assets/js/validator.js"></script>
 
-    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <!-- ================================ Custom Javascript File ====================== -->
+    <script src="assets/js/main.js"></script>
 
+    <!-- ================================ Contact Form ================================ -->
+    <script src="assets/js/contact.js"></script>
+    <script src="assets/js/validator.js"></script>
+
+    <!-- ================================ Google Recaptcha ============================ -->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
 
 </body>
 
