@@ -27,6 +27,8 @@ $recaptchaSecret = '6LcmAaYUAAAAANKWx5uat27E8U6iAV-8H_Dkf2Bo';
 
 // let's do the sending
 
+
+
 // if you are not debugging and don't need error reporting, turn this off by error_reporting(0);
 error_reporting(E_ALL & ~E_NOTICE);
 
