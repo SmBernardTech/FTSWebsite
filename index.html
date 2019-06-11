@@ -368,65 +368,77 @@
 
 
     <!-- Contact Form Section   ================================================== -->
+    <section id="contactForm" class="s-contactForm target-section">
 
-    <section id="contactForm3">
         <div class="container">
-
-            <h1 class="agile">Contact Us</h1>
-
-            <div class="content-w3ls">
-                <form role="form" id="contactForm" data-toggle="validator" class="shake">
+            <div class="row">
+                <div class="col-xl-8 offset-xl-2">
+                    <h1>Contact Us</h1>
                     <h2>We'd love to hear from you!</h2>
                     <p>All fields required</p>
 
+                    <form id="contact-form" method="post" action="contact.php" role="form">
+                        <div class="messages"></div>
 
-                    <div class="form-group">
-                        <label for="name" class="sr-only">Name</label>
-                        <input type="text" id="name" name="name" class="form-control" placeholder="Enter Name" title="Enter Name" required data-error="Name required">
-                        <div class="help-block with-errors"></div>
-                    </div>
+                        <div class="controls">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label for="form_name" class="sr-only">First Name</label>
+                                        <input id="form_name" type="text" name="name" class="form-control" placeholder="Enter First Name" required="required" data-error="First name required">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label for="form_lastname" class="sr-only">Last Name</label>
+                                        <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Enter Last Name" required="required" data-error="Last name required">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label for="form_email" class="sr-only">Email</label>
+                                        <input id="form_email" type="email" name="email" class="form-control" placeholder="Enter Email" required="required" data-error="Valid email required">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label for="form_phone" class="sr-only">Phone</label>
+                                        <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Enter Phone" required="required" data-error="Valid phone required">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="form_message" class="sr-only">Message</label>
+                                <textarea id="form_message" name="message" class="form-control" placeholder="Enter Message" rows="4" required="required" data-error="Message required"></textarea>
+                                <div class="help-block with-errors"></div>
+                            </div>
 
-                    <div class="form-group">
-                        <label for="phone" class="sr-only">Phone</label>
-                        <input type="text" id="phone" name="phone" class="form-control" placeholder="Enter Phone" title="Enter Phone" required data-error="Phone required">
-                        <div class="help-block with-errors"></div>
-                    </div>
+                            <div class="form-group">
+                                <div class="g-recaptcha" data-sitekey="6LcmAaYUAAAAAGeppSM73ZxhZjrZmprBSrMphZpt" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
+                                <input class="form-control" data-recaptcha="true" required data-error="Captcha required">
+                                <div class="help-block with-errors"></div>
+                            </div>
 
-                    <div class="form-group">
-                        <label for="email" class="sr-only">Email</label>
-                        <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email" title="Enter Email" required data-error="Email required">
-                        <div class="help-block with-errors"></div>
-                    </div>
+                            <input type="submit" class="submitMsg" value="Send message">
+                        </div>
 
-                    <div class="form-group">
-                        <label for="message" class="sr-only">Message</label>
-                        <textarea id="message" name="message" class="form-control" rows="5" placeholder="Enter Message" title="Enter Message" required data-error="Message required"></textarea>
-                        <div class="help-block with-errors"></div>
-                    </div>
+                    </form>
 
-                    <div class="form-group">
-                        <input type="checkbox" id="Consent" name="Consent" required value="given">&emsp;I agree to be contacted
-                        <div class="help-block with-errors"></div>
-                    </div>
+                </div>
 
-                    <!-- <div class="form-group">
-                        <div class="g-recaptcha" style="margin: 2%" data-sitekey="6LcmAaYUAAAAAGeppSM73ZxhZjrZmprBSrMphZpt"></div>
-                        <input class="form-control d-none" data-recaptcha="true" required data-error="Please complete the Captcha">
-                        <div class="help-block with-errors"></div>
-                </div> -->
-                    <div class="form-group">
-                        <div class="g-recaptcha" data-sitekey="6LcmAaYUAAAAAGeppSM73ZxhZjrZmprBSrMphZpt" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
-                        <input class="form-control d-none" data-recaptcha="true" required data-error="Please complete the Captcha">
-                        <div class="help-block with-errors"></div>
-                    </div>
-
-                    <input type="submit" id="form-submit" class="submitMsg" value="Submit"><br>
-                    <div id="msgSubmit" class="text-center hidden"></div>
-                    <div class="clearfix"></div>
-                </form>
             </div>
+
         </div>
+
+
     </section>
+
     <!-- Contact Form Section End-->
 
     <!-- Support Section    ================================================== -->
@@ -483,20 +495,11 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-    <script type="text/javascript" src="js/validator.min.js"></script>
-    <script type="text/javascript" src="js/form-scripts.js"></script>
-    <!-- <script src="js/formValidatorConsent.js"></script>
-    <script src="js/formValidatorInstallation.js"></script> -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script>
-        $("form").submit(function(event) {
-            var recaptcha = $("#g-recaptcha-response").val();
-            if (recaptcha === "") {
-                event.preventDefault();
-                alert("Please check the recaptcha");
-            }
-        });
-</script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/validator.js"></script>
+
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+
 
 </body>
 

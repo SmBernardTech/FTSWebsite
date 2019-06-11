@@ -71,74 +71,6 @@
 /* ###CUSTOM
 /* ================================================================== */
 
-#contact-form {
-    padding: 5%;
-    background: #0C1117;
-}
-
-.col-md-3 {
-    padding: 50px;
-    border-top-left-radius: 2.5rem;
-    border-bottom-left-radius: 2.5rem;
-    background: #080A3E;
-    border-style: solid;
-    border-color: #000;
-    border-width: 5px 0px 5px 5px;
-    height: 700px;
-}
-
-.col-md-9 {
-    padding: 50px;
-    border-style: solid;
-    border-color: #000;
-    border-width: 5px 5px 5px 0px;
-    border-top-right-radius: 2.5rem;
-    border-bottom-right-radius: 2.5rem;
-    background: #04090D;
-    height: 700px;
-}
-
-.contact-info {
-    margin-top: 10%;
-}
-
-.contact-info img {
-    color: #9EBDDB;
-}
-
-#contact-form h2 {
-    color: #9EBDDB;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 3.7rem;
-    font-weight: 600;
-}
-
-#contact-form h4 {
-    color: #EDEDED;
-}
-
-.contact-form label {
-    font-weight: 600;
-}
-
-
-/* ------------------------------------------------------------------- 
- * ##Responsive: CUSTOM
- * ------------------------------------------------------------------- */
-
-@media only screen and (max-width:1247px) {
-    .col-md-9 {
-        padding: 15px;
-        border-style: none;
-        background: transparent;
-    }
-    .col-md-3 {
-        padding: 15px;
-        border-style: none;
-        background: transparent;
-    }
-}
-
 
 /* ===================================================================
  * ###BASE STYLE OVERRIDES
@@ -2974,6 +2906,51 @@ footer a {
 
 /* *************************************** */
 
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* *************************************** */
+
+.s-contactForm {
+    box-shadow: 0 3px 15px rgba(0, 0, 0, .2);
+    background-color: #121212;
+    position: relative;
+    background-size: cover;
+    align-items: center;
+    padding: 3%;
+    color: #ededed;
+}
+
+.s-contactForm h1 {
+    text-transform: uppercase;
+    align-content: center;
+    text-align: center;
+    font-family: "Quicksand-bold", sans-serif;
+    font-size: 40px;
+    color: #9EBDDB;
+    letter-spacing: -1px;
+    margin-bottom: 3px;
+}
+
+.s-contactForm h2 {
+    margin-top: 25px;
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+    color: #9EBDDB;
+    padding-bottom: 15px;
+    font-family: "Quicksand", sans-serif;
+}
+
+.s-contactForm p {
+    margin: 5px;
+    text-align: left;
+    color: #ededed;
+    font-weight: 200;
+    font-family: "Quicksand", sans-serif;
+}
+
 #message.form-control {
     display: block;
     margin: 2%;
@@ -2995,66 +2972,28 @@ footer a {
     background: #fff;
 }
 
-#contactForm3 {
-    box-shadow: 0 3px 15px rgba(0, 0, 0, .2);
-    background-color: #121212;
-    position: relative;
-    background-size: cover;
-    align-items: center;
-    padding: 3%;
-    color: #ededed;
-}
-
-.content-w3ls {
-    width: 50%;
-    margin: 0 auto;
-    background: #080A0C;
-    text-align: center;
-    align-items: center;
-    /* padding: 30px 0 0; */
-    padding: 1%;
-}
-
-.content-w3ls .form-w3ls {
-    width: 89%;
-    margin: 0 auto 15px;
-}
-
-h1.agile {
-    text-transform: uppercase;
-    text-align: center;
-    margin-top: 25px;
-    color: #9EBDDB;
-    font-size: 44px;
-    font-weight: 800;
-    font-family: "Quicksand-bold", sans-serif;
-}
-
-.content-w3ls h2 {
-    margin-top: 25px;
-    font-size: 32px;
-    font-weight: 400;
-    text-align: center;
-    color: #9EBDDB;
-    padding-bottom: 15px;
-    font-family: "Quicksand", sans-serif;
-}
-
-.content-w3ls p {
-    margin-left: 20px;
-    margin-bottom: 0;
-    text-align: left;
-    color: #ededed;
-    font-weight: 200;
-    font-family: "Quicksand", sans-serif;
-}
-
 input[type="text"],
 input[type="email"],
+input[type="tel"],
+input[type="id"],
 textarea {
     display: block;
-    margin: 2% 2% 3% 2%;
-    width: 96%;
+    width: 100%;
+    align-items: center;
+    padding: 10px;
+    font-size: 16px;
+    color: #3D4145;
+    background: #ededed;
+    font-family: "Quicksand", sans-serif;
+    letter-spacing: 1px;
+    border: 1px solid #dce4ec;
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
     align-items: center;
     padding: 10px;
     font-size: 16px;
@@ -3108,15 +3047,16 @@ textarea::-ms-input-placeholder {
 }
 
 input.submitMsg {
-    margin: 2%;
-    width: 96%;
+    width: 100%;
     height: 100px;
+    font-family: "Quicksand", sans-serif;
+    letter-spacing: 1px;
     font-size: 20px;
     font-weight: normal;
     text-transform: uppercase;
     color: #ededed;
-    font-family: "Quicksand", sans-serif;
     background-color: #485B6E;
+    border: 1px solid #dce4ec;
     transition: all 0.5s ease-in-out;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
@@ -3127,8 +3067,18 @@ input.submitMsg {
     cursor: pointer;
 }
 
+.g-recaptcha {
+    margin-bottom: 30px;
+}
+
 input.submitMsg:hover {
-    background-color: #fff;
+    background-color: #9EBDDB;
+}
+
+.help-block.with-errors {
+    color: #ff5050;
+    font-family: "Quicksand", sans-serif;
+    margin: 0 0 0 10px;
 }
 
 
@@ -3310,17 +3260,3 @@ input.submitMsg:hover {
 
 
 /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
-
-#msgSubmit.h3 {
-    font-size: 16px;
-    margin: 0 0 10px 30px;
-    text-align: center;
-    color: #c66668;
-}
-
-#contactForm3 ul {
-    margin: 0 0 10px 30px;
-    text-align: left;
-    font-size: 18px;
-    color: #c66668;
-}
