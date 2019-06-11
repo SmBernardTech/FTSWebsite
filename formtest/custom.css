@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Dr+Sugiyama");
+@import url("micons/micons.css");
+@import url("font-awesome/css/fontawesome-all.css");
+
+/* @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Nunito+Sans:300,400,400i,600,600i,700,700i"); */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+
+
+/* *************************************** */
+
+.s-contactForm {
+    box-shadow: 0 3px 15px rgba(0, 0, 0, .2);
+    background-color: #121212;
+    position: relative;
+    background-size: cover;
+    align-items: center;
+    padding: 3%;
+    color: #ededed;
+}
+
+.s-contactForm h1 {
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 25px;
+    color: #9EBDDB;
+    font-size: 44px;
+    font-weight: 800;
+    font-family: "Quicksand-bold", sans-serif;
+}
+
+.s-contactForm h2 {
+    margin-top: 25px;
+    font-size: 32px;
+    font-weight: 400;
+    text-align: center;
+    color: #9EBDDB;
+    padding-bottom: 15px;
+    font-family: "Quicksand", sans-serif;
+}
+
+.s-contactForm p {
+    margin: 5px;
+    text-align: left;
+    color: #ededed;
+    font-weight: 200;
+    font-family: "Quicksand", sans-serif;
+}
+
+#message.form-control {
+    display: block;
+    margin: 2%;
+    width: 96%;
+    align-items: center;
+    padding: 10px;
+    font-size: 16px;
+    color: #3D4145;
+    background: #ededed;
+    font-family: "Quicksand", sans-serif;
+    letter-spacing: 1px;
+    border: 1px solid #dce4ec;
+    border-radius: 4px;
+}
+
+#message.form-control:hover,
+#message.form-control:active,
+#message.form-control:focus {
+    background: #fff;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="id"],
+textarea {
+    display: block;
+    width: 100%;
+    align-items: center;
+    padding: 10px;
+    font-size: 16px;
+    color: #3D4145;
+    background: #ededed;
+    font-family: "Quicksand", sans-serif;
+    letter-spacing: 1px;
+    border: 1px solid #dce4ec;
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    align-items: center;
+    padding: 10px;
+    font-size: 16px;
+    color: #3D4145;
+    background: #ededed;
+    font-family: "Quicksand", sans-serif;
+    letter-spacing: 1px;
+    border: 1px solid #dce4ec;
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+textarea:hover {
+    background: #fff;
+}
+
+input::-webkit-input-placeholder {
+    color: #485B6E!important;
+}
+
+input:-moz-placeholder {
+    /* Firefox 18- */
+    color: #485B6E!important;
+}
+
+input::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #485B6E!important;
+}
+
+input:-ms-input-placeholder {
+    color: #485B6E!important;
+}
+
+textarea::-webkit-input-placeholder {
+    color: #485B6E!important;
+}
+
+textarea::-moz-placeholder {
+    /* Firefox 18- */
+    color: #485B6E!important;
+}
+
+textarea::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #485B6E!important;
+}
+
+textarea::-ms-input-placeholder {
+    color: #485B6E!important;
+}
+
+input.submitMsg {
+    width: 100%;
+    height: 100px;
+    font-family: "Quicksand", sans-serif;
+    letter-spacing: 1px;
+    font-size: 20px;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #ededed;
+    background-color: #485B6E;
+    border: 1px solid #dce4ec;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.g-recaptcha {
+    margin-bottom: 30px;
+}
+
+input.submitMsg:hover {
+    background-color: #9EBDDB;
+}
+
+.help-block.with-errors {
+    color: #ff5050;
+    font-family: "Quicksand", sans-serif;
+    margin: 0 0 0 10px;
+}
