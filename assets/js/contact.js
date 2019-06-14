@@ -1,16 +1,16 @@
 $(function() {
 
-    window.verifyRecaptchaCallback = function(response) {
+    window.verifyRecaptchaCallback = function (response) {
         $('input[data-recaptcha]').val(response).trigger('change');
     }
 
-    window.expiredRecaptchaCallback = function() {
+    window.expiredRecaptchaCallback = function () {
         $('input[data-recaptcha]').val("").trigger('change');
     }
 
     $('#contact-form').validator();
 
-    $('#contact-form').on('submit', function(e) {
+    $('#contact-form').on('submit', function (e) {
         if (!e.isDefaultPrevented()) {
             var url = "https://fineonline.com/assets/php/contact.php";
 
@@ -18,7 +18,7 @@ $(function() {
                 type: "POST",
                 url: url,
                 data: $(this).serialize(),
-                success: function(data) {
+                success: function (data) {
                     var messageAlert = 'alert-' + data.type;
                     var messageText = data.message;
 
