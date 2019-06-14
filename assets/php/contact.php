@@ -14,7 +14,7 @@ $subject = "New message from fineOnlione.com's contact form";
 
 // form field names and their translations.
 // array variable name => Text to appear in the email
-$fields = array('name' => 'Name', 'surname' => 'Surname', 'phone' => 'Phone', 'email' => 'Email', 'message' => 'Message');
+$fields = array('name' => 'Name', 'phone' => 'Phone', 'email' => 'Email', 'message' => 'Message');
 
 // message that will be displayed when everything is OK :)
 $okMessage = 'Message submitted.<br> Thank you; I will get back to you soon!';
