@@ -173,14 +173,15 @@
                 getGenericError()
         }
 
-        $.each(this.validators, $.proxy(function(key, validator) {
+        $.each(this.validators, $.proxy(function (key, validator) {
             var error = null
             if ((getValue($el) || $el.attr('required')) &&
                 ($el.data(key) || key == 'native') &&
                 (error = validator.call(this, $el))) {
-                error = getErrorMessage(key) || error!~errors.indexOf(error) && errors.push(error)
+               error = getErrorMessage(key) || error
+              !~errors.indexOf(error) && errors.push(error)
             }
-        }, this))
+          }, this))
 
         if (!errors.length && getValue($el) && $el.data('remote')) {
             this.defer($el, function() {
