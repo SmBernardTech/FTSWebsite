@@ -12,7 +12,7 @@ $(function() {
 
     $('#contact-form').on('submit', function(e) {
         if (!e.isDefaultPrevented()) {
-            var url = "assets/php/contact.php";
+            var url = "https://fineonline.com/assets/php/contact.php";
 
             $.ajax({
                 type: "POST",
