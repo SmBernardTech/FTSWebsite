@@ -398,7 +398,7 @@
                     <p style="float: left">* All fields required</p>
 
                     <!-- ============= FORM ============= -->
-                    <form id="contact-form" method="post" action="https://fineonline.com/assets/php/contact.php" role="form">
+                    <form id="contact-form" method="post" action="assets/php/contact.php" role="form">
 
                         <!-- Where success/error message will show -->
                         <div class="messages"></div>
@@ -459,34 +459,34 @@
     <!-- <section id="support"> -->
     <section id="support" class="s-support">
 
-        <div class="row narrow section-intro add-bottom text-center">
+        <div class="row add-bottom">
 
-            <div class="col-twelve">
-                <h1>Remote Support</h1>
+            <div class="col-twelve tab-full">
+                <h1 class="display-1ac">Remote Support</h1>
             </div>
 
-            <div class="row add-bottom">
-                <div class="col-twelve">
+            <div class="col-twelve tab-full">
+                <div class="containerRemote">
 
                     <!-- ============= FORM ============= -->
-                    <form method="post" action="https://fastsupport.gotoassist.com/servlet/download/customerDownload" name="ssid" target="_blank">
+                    <form method="post" action="https://www.fastsupport.com/servlet/download/customerDownload" name="ssid" target="_blank">
                         <div class="table-responsive">
                             <table>
                                 <tbody>
                                     <tr>
-                                        <td>
+                                        <td class="col-lg-4">
                                             <label class="sr-only" for="form_message">Name</label>
                                             <input id="remote_name" type="text" name="name" placeholder="Name">
                                         </td>
 
-                                        <td>
+                                        <td class="col-lg-4">
                                             <label class="sr-only" for="form_message">Number</label>
                                             <input id="remote_num" type="text" name="supportSessionId" placeholder="9 digit number">
                                         </td>
 
-                                        <td>
+                                        <td class="col-lg-4">
                                             <div class="support-content__button">
-                                                <button type="submit" value="Connect" class="btn btn--large">Connect</button>
+                                                <button type="submit" class="btn btn--large" onclick="submitForm()">Connect</button>
                                             </div>
                                         </td>
                                     </tr>
@@ -494,12 +494,10 @@
                             </table>
                         </div>
                     </form>
-
                 </div>
             </div>
         </div>
     </section>
-    <!-- =============================== end of support ================================ -->
 
 
     <!-- ================================ footer ======================================= -->
@@ -517,7 +515,7 @@
         </div>
 
         <div class="ss-go-top">
-            <a class="smoothscroll" title="Back to Top" href="#top">&#x21E7; Back to Top &#x21E7;</a>
+            <a class="smoothscroll" title="Back to Top" href="#top">&#x21E7; &#x21E7;</a>
         </div>
     </footer>
     <!-- ================================ end of footer =============================== -->
@@ -528,7 +526,7 @@
     <script src="assets/js/jquery-3.2.1.min.js"></script>
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/modernizr.js"></script>
-
+    <script src="assets/js/validator.js"></script>
 
     <!-- ================================ Custom Javascript File ====================== -->
     <script src="assets/js/main.js"></script>
@@ -536,6 +534,7 @@
     <!-- ================================ Contact Form ================================ -->
     <script src="assets/js/contact.js"></script>
     <script src="assets/js/validator.js"></script>
+
     <!-- ================================ Google Recaptcha ============================ -->
     <script src="https://www.google.com/recaptcha/api.js"></script>
 

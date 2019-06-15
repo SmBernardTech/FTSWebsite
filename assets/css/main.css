@@ -1714,7 +1714,7 @@ html.no-csstransitions .home-content__main {
 }
 
 .support-content__button .btn {
-    width: 30rem;
+    width: 27rem;
     height: 6rem !important;
     margin-right: 0;
     margin-top: 5px;
@@ -1736,6 +1736,14 @@ html.no-csstransitions .home-content__main {
     align-content: center;
     align-items: center;
     align-self: center;
+}
+
+#remote_name {
+    margin-left: 8px;
+}
+
+.containerRemote {
+    margin-left: 100px;
 }
 
 
@@ -1814,6 +1822,11 @@ footer a {
     line-height: 1.5;
 }
 
+.smb a:hover,
+.smb a:focus {
+    color: #59898d;
+}
+
 
 /*  ==================================================  
  *  ##ss-go-top
@@ -1826,7 +1839,6 @@ footer a {
     font-family: "Montserrat", sans-serif;
     font-weight: 700;
     font-size: 13px;
-    text-transform: uppercase;
     letter-spacing: .3rem;
     height: 75px;
     line-height: 75px;
@@ -1845,6 +1857,10 @@ footer a {
     display: block;
     height: 16px;
     width: 12px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 13px;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
@@ -1856,6 +1872,10 @@ footer a {
 
 .ss-go-top a:hover,
 .ss-go-top a:focus {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 13px;
     background-color: #080A0C;
     border: .2rem solid #485B6E;
 }
@@ -2325,7 +2345,13 @@ table {
     max-width: 100%;
     font-family: "Nunito Sans", sans-serif;
     border-collapse: collapse;
-    margin-left: 5rem;
+    /* margin-left: 5rem; */
+}
+
+tbody {
+    display: table-row-group;
+    scroll-snap-align: middle;
+    border-color: inherit;
 }
 
 th,
@@ -2422,7 +2448,8 @@ textarea,
 select {
     display: block;
     margin-top: 5px;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
+    margin-left: 0;
     height: 6rem !important;
     padding: 1.5rem 2.4rem;
     border: .2rem solid #485B6E;
@@ -2748,53 +2775,6 @@ button::-moz-focus-inner,
 input::-moz-focus-inner {
     border: 0;
     padding: 0;
-}
-
-
-/*  ==================================================  
- *  ##Alert-box
- *  ==================================================  */
-
-.alert-box {
-    padding: 2.1rem 4rem 2.1rem 3rem;
-    position: relative;
-    margin-bottom: 3rem;
-    border-radius: 3px;
-    font-family: "Nunito Sans", sans-serif;
-    font-weight: 600;
-    font-size: 1.5rem;
-    line-height: 1.6;
-}
-
-.alert-box__close {
-    position: absolute;
-    right: 1.8rem;
-    top: 1.8rem;
-    cursor: pointer;
-}
-
-.alert-box__close.fa {
-    font-size: 12px;
-}
-
-.alert-box--error {
-    background-color: #ffd1d2;
-    color: #e65153;
-}
-
-.alert-box--success {
-    background-color: #c8e675;
-    color: #758c36;
-}
-
-.alert-box--info {
-    background-color: #d7ecfb;
-    color: #4a95cc;
-}
-
-.alert-box--notice {
-    background-color: #fff099;
-    color: #bba31b;
 }
 
 
