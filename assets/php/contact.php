@@ -23,7 +23,7 @@ $okMessage = 'Message submitted.<br> Thank you! We will contact you shortly!';
 $errorMessage = 'Form Submission Error.<br> Please try again.';
 
 // ReCaptcha Secret
-$recaptchaSecret = '6LcmAaYUAAAAANKWx5uat27E8U6iAV-8H_Dkf2Bo';
+$recaptchaSecret = 'ENTER_GOOGLE_SECRET_KEY';
 
 // let's do the sending
 
