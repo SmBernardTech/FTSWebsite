@@ -22,13 +22,8 @@ $okMessage = 'Message submitted.<br> Thank you! We will contact you shortly!';
 // If something goes wrong, we will display this message.
 $errorMessage = 'Form Submission Error.<br> Please try again.';
 
-<<<<<<< HEAD
 // ReCaptcha Secret---Will need to replace testing key with personal secret key---ENTER_SECRET_RECPATCHA_SITEKEY
 $recaptchaSecret = '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe';
-=======
-// ReCaptcha Secret
-$recaptchaSecret = 'ENTER_GOOGLE_SECRET_KEY';
->>>>>>> 6265a0be85b4e612da96cae40a38f314d59907e2
 
 // let's do the sending
 
