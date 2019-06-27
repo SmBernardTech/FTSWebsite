@@ -1,4 +1,4 @@
-# ![Alt](assets/images/logo/logo.png "FTS")
+
 ## Founded in 1997 by Michael Fine, Fine Technology Solutions is everything an effective IT partner should be! 
 ## As your IT partner, we are always ready to help with any size technology problem or device.
 
@@ -21,7 +21,6 @@
 
 
 
-###	 ![Alt](assets/images/logo/FTSlogo.png "FTS")
 ## Your Technology Solutions Provider!
 ~~~~
  +1 (800) 910-FINE
