@@ -348,7 +348,7 @@
             display: inline-block;
             font-size: 2.4rem;
             margin: 0;
-            color: #9EBDDB;
+            color: #000;
         }
         
         .header-nav__social li {
@@ -358,12 +358,12 @@
         }
         
         .header-nav__social li a {
-            color: #EBF1F7;
+            color: #000;
         }
         
         .header-nav__social li a:hover,
         .header-nav__social li a:focus {
-            color: #ededed;
+            color: #333;
         }
         
         .header-nav__social li:last-child {
@@ -709,7 +709,7 @@
         
         .home-content__scroll {
             position: absolute;
-            right: 9.5rem;
+            right: 12.5rem;
             bottom: 5.4rem;
             -webkit-transform: rotate(-90deg) translate3d(100%, 50%, 0);
             -ms-transform: rotate(-90deg) translate3d(100%, 50%, 0);
@@ -1715,7 +1715,7 @@
             text-align: center;
             position: relative;
             padding-top: 9rem;
-            padding-bottom: 4rem;
+            padding-bottom: 2rem;
             background-image: url(../images/bg/bg4footer.jpg);
             background-repeat: no-repeat;
             background-position: center center;
@@ -1747,8 +1747,7 @@
         /*  ==================================================  
  *  ##smb
  *  ==================================================  */
-        
-        .smb a {
+        /* .smb a {
             font-family: 'Dr Sugiyama', cursive;
             color: #acc4c6;
             font-size: 20px;
@@ -1758,6 +1757,16 @@
         .smb a:hover,
         .smb a:focus {
             color: #59898d;
+        } */
+        
+        .smb img {
+            margin-top: 10px;
+            margin-bottom: 0px;
+            max-height: 50px;
+        }
+        
+        .smb img:hover {
+            opacity: .75;
         }
         /*  ==================================================  
  *  ##ss-go-top
