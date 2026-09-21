@@ -2,3 +2,10 @@ Options -Indexes
 RewriteEngine On
 RewriteCond %{SERVER_PORT} 80
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
+
+# Hidden files: Blocks .git, .gitignore, .htaccess & the like. .well-known stays open for SSL renewals
+RewriteCond %{REQUEST_URI} !^/\.well-known/
+RewriteRule (^|/)\. - [R=404,L]
+
+# Markdown: Internal notes & README are for GitHub, not visitors
+RewriteRule \.md$ - [R=404,L]

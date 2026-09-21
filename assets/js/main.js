@@ -8,11 +8,16 @@
     "use strict";
     
     var cfg = {
-        scrollDuration : 800, // smoothscroll duration
-        mailChimpURL   : 'https://facebook.us8.list-manage.com/subscribe/post?u=cdb7b577e41181934ed6a6a44&amp;id=e6957d85dc'   // mailchimp url
+        scrollDuration : 800 // smoothscroll duration
     },
 
     $WIN = $(window);
+
+    // reduceMotion: Visitor asked their OS for less motion, so skip animations & parallax
+    var reduceMotion = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    if (reduceMotion) {
+        cfg.scrollDuration = 0;
+    }
 
     // Add the User Agent to the <html>
     // will be used for IE10 detection (Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0))
@@ -21,9 +26,8 @@
 
     // svg fallback
     if (!Modernizr.svg) {
-        $(".header-logo img").attr("src", "images/logo.png");
+        $(".header-logo img").attr("src", "assets/images/logo/logo.png");
     }
-
 
    /* Preloader
     * -------------------------------------------------- */
@@ -34,7 +38,7 @@
         $WIN.on('load', function() {
 
             //force page scroll position to top at page refresh
-            $('html, body').animate({ scrollTop: 0 }, 'normal');
+            $('html, body').animate({ scrollTop: 0 }, reduceMotion ? 0 : 'normal');
 
             // will first fade out the loading animation 
             $("#loader").fadeOut("slow", function() {
@@ -48,8 +52,9 @@
         
         });
     };
+    
 
-
+   /* ------------------------------------------------------ */
    /* Menu on Scrolldown
     * ------------------------------------------------------ */
     var ssMenuOnScrolldown = function() {
@@ -79,10 +84,19 @@
             siteBody        = $('body'),
             mainContents    = $('section, footer');
 
+        // setMenuState: Keeps the toggle's screen reader label in step with the menu
+        var setMenuState = function(isOpen) {
+            menuTrigger.attr({
+                'aria-expanded': isOpen ? 'true' : 'false',
+                'aria-label': isOpen ? 'Close menu' : 'Open menu'
+            });
+        };
+
         // open-close menu by clicking on the menu icon
         menuTrigger.on('click', function(e){
             e.preventDefault();
             siteBody.toggleClass('menu-is-open');
+            setMenuState(siteBody.hasClass('menu-is-open'));
         });
 
         // close menu by clicking the close button
@@ -95,94 +109,17 @@
         siteBody.on('click', function(e){
             if( !$(e.target).is('.header-nav, .header-nav__content, .header-menu-toggle, .header-menu-toggle span') ) {
                 siteBody.removeClass('menu-is-open');
+                setMenuState(false);
             }
         });
 
     };
 
 
-   /* Masonry
-    * ---------------------------------------------------- */ 
-    var ssMasonryFolio = function () {
-        
-        var containerBricks = $('.masonry');
-
-        containerBricks.imagesLoaded(function () {
-            containerBricks.masonry({
-                itemSelector: '.masonry__brick',
-                resize: true
-            });
-        });
-    };
 
 
-   /* photoswipe
-    * ----------------------------------------------------- */
-    var ssPhotoswipe = function() {
-        var items = [],
-            $pswp = $('.pswp')[0],
-            $folioItems = $('.item-folio');
-
-        // get items
-        $folioItems.each( function(i) {
-
-            var $folio = $(this),
-                $thumbLink =  $folio.find('.thumb-link'),
-                $title = $folio.find('.item-folio__title'),
-                $caption = $folio.find('.item-folio__caption'),
-                $titleText = '<h4>' + $.trim($title.html()) + '</h4>',
-                $captionText = $.trim($caption.html()),
-                $href = $thumbLink.attr('href'),
-                $size = $thumbLink.data('size').split('x'),
-                $width  = $size[0],
-                $height = $size[1];
-        
-            var item = {
-                src  : $href,
-                w    : $width,
-                h    : $height
-            }
-
-            if ($caption.length > 0) {
-                item.title = $.trim($titleText + $captionText);
-            }
-
-            items.push(item);
-        });
-
-        // bind click event
-        $folioItems.each(function(i) {
-
-            $(this).on('click', function(e) {
-                e.preventDefault();
-                var options = {
-                    index: i,
-                    showHideOpacity: true
-                }
-
-                // initialize PhotoSwipe
-                var lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
-                lightBox.init();
-            });
-
-        });
-    };
 
 
-   /* slick slider
-    * ------------------------------------------------------ */
-    var ssSlickSlider = function() {
-        
-        $('.testimonials__slider').slick({
-            arrows: false,
-            dots: true,
-            infinite: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            pauseOnFocus: false,
-            autoplaySpeed: 1500
-        });
-    };
 
 
    /* Smooth Scrolling
@@ -212,15 +149,6 @@
     };
 
 
-   /* Alert Boxes
-    * ------------------------------------------------------ */
-    var ssAlertBoxes = function() {
-
-        $('.alert-box').on('click', '.alert-box__close', function() {
-            $(this).parent().fadeOut(500);
-        }); 
-
-    };
 
 
    /* Animate On Scroll
@@ -233,9 +161,39 @@
             easing: 'ease-in-sine',
             delay: 300,
             once: true,
-            disable: 'mobile'
+            disable: reduceMotion ? true : 'mobile'
         });
 
+    };
+
+
+   /* Hero Image Alt
+    * ------------------------------------------------------ */
+    // ssHeroAlt: Parallax builds the hero <img> at runtime, so copy data-image-alt onto it
+    var ssHeroAlt = function() {
+
+        $WIN.on('load', function() {
+            var alt = $('.s-home').data('image-alt');
+            if (alt) {
+                $('.parallax-mirror .parallax-slider').attr('alt', alt);
+            }
+        });
+    };
+
+
+   /* Reduced Motion
+    * ------------------------------------------------------ */
+    // ssReducedMotion: Runs before parallax starts, swapping it for a still background
+    var ssReducedMotion = function() {
+
+        if (!reduceMotion) return;
+
+        var $hero = $('.s-home');
+        $hero.removeAttr('data-parallax').css({
+            'background-image': 'url(' + $hero.data('image-src') + ')',
+            'background-size': 'cover',
+            'background-position': 'center'
+        });
     };
 
 
@@ -243,15 +201,13 @@
     * ------------------------------------------------------ */
     (function clInit() {
 
+        ssReducedMotion();
         ssPreloader();
         ssMenuOnScrolldown();
         ssOffCanvas();
-        ssMasonryFolio();
-        ssPhotoswipe();
-        ssSlickSlider();
         ssSmoothScroll();
-        ssAlertBoxes();
         ssAOS();
+        ssHeroAlt();
 
     })();
 

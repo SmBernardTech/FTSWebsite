@@ -44,7 +44,8 @@
  *  responsive: CONTACT
  *  
  *  7. ContactForm
- *  ##g-recaptcha
+ *  ##cf-turnstile
+ *  ##form-messages
  *  
  *  8. Support
  *  responsive: SUPPORT
@@ -54,6 +55,7 @@
  *  ##smb
  *  ##ss-go-top
  *  responsive: FOOTER
+ *  ##cookie-notice
  *  
  *  10. General
  *  ##Base style overrides
@@ -74,6 +76,12 @@
  *  ##section-header
  *  ##Reusable
  *  responsive: REUSABLE
+ *  
+ *  11. Accessibility
+ *  ##Screen Reader Only
+ *  ##Skip Link
+ *  ##Focus
+ *  ##Reduced Motion
  *
  * @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
         /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -129,7 +137,8 @@
         #loader>div:nth-of-type(3) {
             left: -15px;
         }
-        /*  ==================================================  
+
+/*  ==================================================
  *  ##dots-jump
  *  ==================================================  */
         
@@ -170,9 +179,10 @@
                 top: 0;
             }
         }
+
         /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
- * 2. Header
- * @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+         * 2. Header
+         * @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
         
         .s-header {
             z-index: 500;
@@ -204,13 +214,13 @@
         .header-logo a {
             display: block;
             padding: 0;
-            outline: 0;
             border: none;
         }
         
         .header-logo img {
             width: 350px;
             height: auto;
+            filter: drop-shadow(0 0 3px rgba(0, 0, 0, 1)) drop-shadow(0 2px 12px rgba(0, 0, 0, .95)) drop-shadow(0 0 20px rgba(0, 0, 0, .6));
         }
         /*  ==================================================  
  *  ##header-nav
@@ -250,7 +260,7 @@
         .header-nav a:active {
             color: white;
         }
-        
+
         .header-nav h3 {
             display: inline-block;
             font-family: "Montserrat", sans-serif;
@@ -381,7 +391,6 @@
             position: absolute;
             top: 39px;
             right: 30px;
-            font: 0/0 a;
             text-shadow: none;
             color: transparent;
         }
@@ -577,9 +586,12 @@
                 font-size: 2.2rem;
             }
         }
+
+
+
         /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
- * 3. Home
- * @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+         * 3. Home
+         * @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
         
         .s-home {
             box-shadow: 0 3px 15px rgba(0, 0, 0, .2);
@@ -600,7 +612,7 @@
             width: 100%;
             height: 100%;
             background-color: #111111;
-            opacity: .7;
+            opacity: .6;
             z-index: 2;
         }
         
@@ -680,6 +692,7 @@
             line-height: 6.8rem !important;
             margin-right: 0;
             position: absolute;
+            font-size: 1.6rem;
         }
         
         .home-content__button .btn:first-child {
@@ -969,7 +982,7 @@
                 margin-top: 7.2rem;
             }
             .home-content__button .btn {
-                font-size: 11px;
+                font-size: 1.4rem;
                 width: 28rem;
                 height: 6.6rem !important;
                 line-height: 6.2rem !important;
@@ -1397,7 +1410,8 @@
             padding-top: 8.1rem;
             background-color: #485B6E;
             font-size: 150%;
-            color: rgba(255, 255, 255, 0.6);
+            /* 85% white on slate: 5.6:1 contrast, 60% was 3.69:1 */
+            color: rgba(255, 255, 255, 0.85);
             text-align: center;
             position: relative;
             margin-bottom: 6rem;
@@ -1592,7 +1606,8 @@
                 font-size: 2.4rem;
             }
         }
-        /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
  * 7. ContactForm
  * @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
         
@@ -1605,7 +1620,7 @@
             color: #ededed;
         }
         
-        .s-contactForm h2 {
+        .s-contactForm h2:not(.display-1ac) {
             color: #EBF1F7;
             margin-bottom: 3rem;
         }
@@ -1615,19 +1630,68 @@
             margin-top: 3rem;
             margin-bottom: 3rem;
         }
+        
+        /* Contact Subhead: Soft, dim glow to lift the navy text off the slate.
+         * Known WCAG exception, kept by design: navy on slate is 2.67:1, target 3:1 */
+        .s-contact .subhead1 {
+            text-shadow: 0 0 8px rgba(158, 189, 219, .35);
+        }
+        
+        /* Send Message: Larger than the site's default 1.2rem button text */
+        .s-contactForm button[type="submit"] {
+            font-size: 1.6rem;
+        }
         /*  ==================================================  
- *  ##g-recaptcha
+ *  ##cf-turnstile
  *  ==================================================  */
         
-        .g-recaptcha {
+        .cf-turnstile {
             margin-top: 30px;
             margin-bottom: 30px;
-            /* theme: dark; */
         }
-        /* .rc-anchor-normal {
-            background: #000!important;
-            color: #000!important;
-        } */
+        /*  ==================================================  
+ *  ##form-messages
+ *  ==================================================  */
+        
+        /* Alert: Success & error box shown above the form after sending */
+        .s-contactForm .alert {
+            position: relative;
+            margin-bottom: 2rem;
+            padding: 1.5rem 4.5rem 1.5rem 2rem;
+            font-size: 1.6rem;
+            line-height: 1.6;
+            text-align: left;
+        }
+        
+        .s-contactForm .alert-success {
+            background-color: #9EBDDB;
+            color: #080A3E;
+        }
+        
+        .s-contactForm .alert-danger {
+            background-color: #F4D6D6;
+            color: #6B1414;
+        }
+        
+        /* Alert Text: Icon hangs left, following lines line up under the text */
+        .s-contactForm .alert-text {
+            display: block;
+            padding-left: 1.8em;
+            text-indent: -1.8em;
+        }
+        
+        .s-contactForm .alert .close {
+            position: absolute;
+            top: .6rem;
+            right: 1rem;
+            padding: 0 .5rem;
+            border: none;
+            background: none;
+            color: inherit;
+            font-size: 2.4rem;
+            line-height: 1;
+            cursor: pointer;
+        }
         /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
  * 8. Support
  * @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
@@ -1642,7 +1706,8 @@
             background-size: cover;
         }
         
-        .s-support h1 {
+        .s-support h1,
+        .s-support h2 {
             color: #9EBDDB;
         }
         
@@ -1654,6 +1719,7 @@
             height: 6rem !important;
             border: .2rem solid #485B6E;
             max-width: 100%;
+            font-size: 1.6rem;
         }
         
         .s-support::before {
@@ -1668,7 +1734,19 @@
         }
         
         .containerRemote {
-            margin-left: 100px;
+            margin-left: 0;
+        }
+
+        /* Remote Row: Centers name, number & button under the heading */
+        .containerRemote .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .containerRemote .row > [class*="col-"] {
+            float: none;
         }
         /*  ==================================================  
  *  responsive: SUPPORT
@@ -1682,7 +1760,8 @@
         }
         
         @media only screen and (max-width:668px) {
-            .s-support h1 {
+            .s-support h1,
+            .s-support h2 {
                 margin-left: 0;
                 text-align: left;
             }
@@ -1719,7 +1798,7 @@
             background-image: url(../images/bg/bg4footer.jpg);
             background-repeat: no-repeat;
             background-position: center center;
-            background-size: inherit;
+            background-size: cover;
         }
         
         footer a {
@@ -1741,7 +1820,8 @@
             color: white;
         }
         
-        .ss-copyright span:last-child::after {
+        .ss-copyright span:last-child::after,
+        .ss-copyright > span:last-of-type::after {
             display: none;
         }
         /*  ==================================================  
@@ -1853,6 +1933,47 @@
                 padding: 0 3rem;
                 padding: 0 2rem;
             }
+        }
+        /*  ==================================================  
+ *  ##cookie-notice
+ *  ==================================================  */
+        
+        /* Cookie Notice: Fixed bar along the bottom until the visitor clicks OK */
+        .cookie-notice {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 900;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem 2.4rem;
+            padding: 1.2rem 2rem;
+            background-color: #151515;
+            box-shadow: 0 -3px 15px rgba(0, 0, 0, .4);
+        }
+        
+        .cookie-notice p {
+            margin: 0;
+            color: #EBF1F7;
+            font-size: 1.6rem;
+            text-align: center;
+        }
+        
+        .cookie-notice a {
+            color: #9EBDDB;
+            text-decoration: underline;
+        }
+        
+        .cookie-notice a:hover {
+            color: #FFFFFF;
+        }
+        
+        .cookie-notice .btn {
+            margin: 0;
+            font-size: 1.6rem;
         }
         /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
  * 10. General
@@ -2273,7 +2394,7 @@
         
         tbody {
             display: table-row-group;
-            scroll-snap-align: middle;
+            scroll-snap-align: center;
             border-color: inherit;
         }
         
@@ -2612,7 +2733,8 @@
         input[type="button"].btn--primary {
             background: #9EBDDB;
             border-color: #9EBDDB;
-            color: #FFFFFF;
+            /* Navy on light blue: 9.6:1 contrast, white was 1.95:1 */
+            color: #080A3E;
         }
         
         .btn.btn--primary:hover,
@@ -2627,6 +2749,7 @@
         input[type="button"].btn--primary:focus {
             background: #080A0B;
             border: .2rem solid #485B6E;
+            color: #FFFFFF;
         }
         /* ----- #button modifiers  ----- */
         
@@ -2921,3 +3044,77 @@
         /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
         /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
         /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+        /* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+ * 11. Accessibility
+ * @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+        /*  ==================================================  
+ *  ##Screen Reader Only
+ *  ==================================================  */
+        
+        /* sr-only: Read aloud by screen readers, invisible on screen */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        /*  ==================================================  
+ *  ##Skip Link
+ *  ==================================================  */
+        
+        /* skip-link: Off screen until a keyboard user tabs to it */
+        .skip-link {
+            position: absolute;
+            top: -100px;
+            left: 1rem;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            background-color: #9EBDDB;
+            color: #080A3E;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 600;
+            font-size: 1.6rem;
+        }
+        
+        .skip-link:focus {
+            top: 1rem;
+            color: #080A3E;
+        }
+        /*  ==================================================  
+ *  ##Focus
+ *  ==================================================  */
+        
+        /* focus-visible: Ring shows for keyboard users only, not on mouse clicks */
+        a:focus-visible,
+        button:focus-visible,
+        input:focus-visible,
+        textarea:focus-visible,
+        select:focus-visible,
+        [role="button"]:focus-visible,
+        .btn:focus-visible {
+            outline: 3px solid #9EBDDB;
+            outline-offset: 3px;
+        }
+        /*  ==================================================  
+ *  ##Reduced Motion
+ *  ==================================================  */
+        
+        /* Reduced Motion: Honors the "reduce motion" setting in the visitor's OS */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: .01ms !important;
+                scroll-behavior: auto !important;
+            }
+            #preloader {
+                display: none !important;
+            }
+        }

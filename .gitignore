@@ -1,0 +1,12 @@
+# Editor: JetBrains project settings, not used for this site
+.idea/
+
+# OS and editor leftovers
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Secrets: The live Turnstile config sits above the web root on the server, not here.
+# These lines are a safety net in case a copy ever lands in the site folder.
+turnstile-config.php
+assets/php/turnstile-config.php
